@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "app_bluenrg_2.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -113,7 +112,6 @@ int main(void)
   MX_SPI2_Init();
   MX_ICACHE_Init();
   MX_TIM17_Init();
-  MX_BlueNRG_2_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
@@ -124,7 +122,6 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-  MX_BlueNRG_2_Process();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
