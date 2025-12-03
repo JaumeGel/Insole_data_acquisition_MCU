@@ -32,6 +32,36 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 
+	/*CAN Defines*/
+//CAN_ID: CAN Bus Identifier in hexadecimal
+#define CAN_ID 0x0FF
+//CAN_STB
+#define CAN_ON	0		// 0: CAN transceiver is in Standby mode
+						// 1: CAN transceiver is activated
+
+	/*Power charger MCP73871*/
+//P_SEL: Input Type Selection
+#define P_SEL	0		// 0: USB power (Limited current)
+						// 1: AC power (1.65A max input current)
+//P_PROG2: USB Current Regulation set
+#define P_PROG2	1		// 0: 100mA max. input current
+						// 1: 500mA max. input current
+//P_TE: Timer Enable to limit charging time
+#define P_TE	1		// 0: 6H Timer Disabled
+						// 1: 6H Timer Enabled
+//P_CE: Charge Enable
+#define P_CE	1		// 0: Charging Disabled
+						// 1: Charging Enabled
+
+//BlueNRG-M2
+
+
+//PCAP04 Capacitance sensors
+
+
+//Resistive sensors
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -68,6 +98,9 @@ static void MX_SPI2_Init(void);
 static void MX_ICACHE_Init(void);
 static void MX_TIM17_Init(void);
 /* USER CODE BEGIN PFP */
+
+static void P_Charger_Init(void);
+static void CAN_Transceiver_Init(void);
 
 /* USER CODE END PFP */
 
@@ -113,6 +146,9 @@ int main(void)
   MX_ICACHE_Init();
   MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
+
+  P_Charger_Init();
+  CAN_Transceiver_Init();
 
   /* USER CODE END 2 */
 
@@ -759,6 +795,52 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+static void P_Charger_Init(void)
+{
+	if(P_SEL == 0)
+	{
+		HAL_GPIO_WritePin(GPIOB, P_SEL_Pin, GPIO_PIN_RESET);
+	}else if(P_SEL == 1)
+	{
+		HAL_GPIO_WritePin(GPIOB, P_SEL_Pin, GPIO_PIN_SET);
+	}
+
+	if(P_PROG2 == 0)
+	{
+		HAL_GPIO_WritePin(GPIOB, P_PROG2_Pin, GPIO_PIN_RESET);
+	}else if(P_PROG2 == 1)
+	{
+		HAL_GPIO_WritePin(GPIOB, P_PROG2_Pin, GPIO_PIN_SET);
+	}
+
+	if(P_TE == 0)
+	{
+		HAL_GPIO_WritePin(GPIOC, P_TE_Pin, GPIO_PIN_SET);
+	}else if(P_TE == 1)
+	{
+		HAL_GPIO_WritePin(GPIOC, P_TE_Pin, GPIO_PIN_RESET);
+	}
+
+	if(P_CE == 0)
+	{
+		HAL_GPIO_WritePin(GPIOC, P_CE_Pin, GPIO_PIN_RESET);
+	}else if(P_CE == 1)
+	{
+		HAL_GPIO_WritePin(GPIOC, P_CE_Pin, GPIO_PIN_SET);
+	}
+}
+
+static void CAN_Transceiver_Init(void)
+{
+	if(CAN_ON == 0)
+	{
+		HAL_GPIO_WritePin(CAN_STB_GPIO_Port, CAN_STB_Pin, GPIO_PIN_SET);
+	}else if(CAN_ON == 1)
+	{
+		HAL_GPIO_WritePin(CAN_STB_GPIO_Port, CAN_STB_Pin, GPIO_PIN_RESET);
+	}
+}
 
 /* USER CODE END 4 */
 

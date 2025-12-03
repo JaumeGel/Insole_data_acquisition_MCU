@@ -35,9 +35,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_fdcan.h \
  ../BlueNRG_2/Target/hci_tl_interface.h ../Core/Inc/custom_bus.h \
- ../Core/Inc/custom_conf.h ../Core/Inc/custom_errno.h \
- ../Drivers/BSP/custom/custom.h ../Core/Inc/custom_conf.h \
- ../Drivers/BSP/custom/custom_errno.h ../BlueNRG_2/App/app_bluenrg_2.h
+ ../Core/Inc/custom_conf.h ../Core/Inc/custom_errno.h
 ../Core/Inc/main.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h:
 ../Core/Inc/stm32u5xx_hal_conf.h:
@@ -78,7 +76,3 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/custom_bus.h:
 ../Core/Inc/custom_conf.h:
 ../Core/Inc/custom_errno.h:
-../Drivers/BSP/custom/custom.h:
-../Core/Inc/custom_conf.h:
-../Drivers/BSP/custom/custom_errno.h:
-../BlueNRG_2/App/app_bluenrg_2.h:

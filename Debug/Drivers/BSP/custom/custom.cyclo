@@ -1,8 +1,0 @@
-../Drivers/BSP/custom/custom.c:72:9:BSP_GetVersion	1
-../Drivers/BSP/custom/custom.c:84:9:BSP_LED_Init	1
-../Drivers/BSP/custom/custom.c:99:9:BSP_LED_DeInit	1
-../Drivers/BSP/custom/custom.c:122:9:BSP_LED_On	1
-../Drivers/BSP/custom/custom.c:139:9:BSP_LED_Off	1
-../Drivers/BSP/custom/custom.c:156:9:BSP_LED_Toggle	1
-../Drivers/BSP/custom/custom.c:173:9:BSP_LED_GetState	1
-../Drivers/BSP/custom/custom.c:181:13:LED_USER_GPIO_Init	1

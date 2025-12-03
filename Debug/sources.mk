@@ -22,11 +22,9 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-BlueNRG_2/App \
 BlueNRG_2/Target \
 Core/Src \
 Core/Startup \
-Drivers/BSP/custom \
 Drivers/STM32U5xx_HAL_Driver/Src \
 Middlewares/ST/BlueNRG-2/hci \
 Middlewares/ST/BlueNRG-2/hci/controller \

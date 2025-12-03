@@ -14,11 +14,9 @@ RM := rm -rf
 -include Middlewares/ST/BlueNRG-2/hci/controller/subdir.mk
 -include Middlewares/ST/BlueNRG-2/hci/subdir.mk
 -include Drivers/STM32U5xx_HAL_Driver/Src/subdir.mk
--include Drivers/BSP/custom/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include BlueNRG_2/Target/subdir.mk
--include BlueNRG_2/App/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
