@@ -59,7 +59,12 @@
 //PCAP04 Capacitance sensors
 
 
-//Resistive sensors
+	/*Resistive sensors*/
+//Offset voltages for op-amp amplifiers negative input
+//Must be between 0.1V and 3.2V
+//Minimum resolution is 0.0008V (12-bit resolution)
+#define Voff1	0.1		//Voltage offset for channels R1-R9
+#define Voff2	0.1		//Voltage offset for channels R10-R15
 
 
 /* USER CODE END PD */
@@ -71,8 +76,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 ADC_HandleTypeDef hadc1;
-DMA_NodeTypeDef Node_GPDMA1_Channel0;
-DMA_QListTypeDef List_GPDMA1_Channel0;
 DMA_HandleTypeDef handle_GPDMA1_Channel0;
 
 DAC_HandleTypeDef hdac1;
@@ -84,6 +87,15 @@ SPI_HandleTypeDef hspi2;
 TIM_HandleTypeDef htim17;
 
 /* USER CODE BEGIN PV */
+
+	/*DAC Variables*/
+uint16_t DAC_Value1;
+uint16_t DAC_Value2;
+
+	/*ADC Variables*/
+uint32_t ADC_Values[15];
+uint16_t R_Values[15];
+uint8_t ADC_eoc_Flag = 0;
 
 /* USER CODE END PV */
 
@@ -147,8 +159,26 @@ int main(void)
   MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
 
+  	  /*Peripheral initialization*/
   P_Charger_Init();
   CAN_Transceiver_Init();
+
+  	  /*DAC Initialization and setup*/
+  HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+  HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
+
+  //DAC output value calculation. Mapping 0 - 3.3V to 0 - 2^12 bits
+  DAC_Value1 = (Voff1*10/33)*4095;
+  DAC_Value2 = (Voff2*10/33)*4095;
+
+  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, DAC_Value1);
+  HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, DAC_Value2);
+
+  	  /*ADC Initialization, calibration and setup*/
+  HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET_LINEARITY, ADC_SINGLE_ENDED);
+
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
+
 
   /* USER CODE END 2 */
 
@@ -157,6 +187,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+
+	  if(ADC_eoc_Flag)
+	  {
+
+	  }
 
     /* USER CODE BEGIN 3 */
   }
@@ -256,7 +291,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.TriggerFrequencyMode = ADC_TRIGGER_FREQ_HIGH;
   hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
   hadc1.Init.LeftBitShift = ADC_LEFTBITSHIFT_NONE;
-  hadc1.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DMA_CIRCULAR;
+  hadc1.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DMA_ONESHOT;
   hadc1.Init.OversamplingMode = DISABLE;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
@@ -840,6 +875,15 @@ static void CAN_Transceiver_Init(void)
 	{
 		HAL_GPIO_WritePin(CAN_STB_GPIO_Port, CAN_STB_Pin, GPIO_PIN_RESET);
 	}
+}
+
+void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
+{
+	for(int i=0;i<15;i++)
+	{
+		R_Values[i] = (uint16_t)ADC_Values[i];
+	}
+	ADC_eoc_Flag = 1;
 }
 
 /* USER CODE END 4 */
