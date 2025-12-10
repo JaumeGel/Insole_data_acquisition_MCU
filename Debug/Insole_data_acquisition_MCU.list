@@ -29,17 +29,17 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  12 .debug_rnglists 00001630  00000000  00000000  00032480  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_macro  00037036  00000000  00000000  00033ab0  2**0
+ 13 .debug_macro  00004f11  00000000  00000000  00033ab0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_line   00022edb  00000000  00000000  0006aae6  2**0
+ 14 .debug_line   00022edb  00000000  00000000  000389c1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_str    001645b2  00000000  00000000  0008d9c1  2**0
+ 15 .debug_str    001645b2  00000000  00000000  0005b89c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .comment      00000043  00000000  00000000  001f1f73  2**0
+ 16 .comment      00000043  00000000  00000000  001bfe4e  2**0
                   CONTENTS, READONLY
- 17 .debug_frame  00007c9c  00000000  00000000  001f1fb8  2**2
+ 17 .debug_frame  00007c9c  00000000  00000000  001bfe94  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line_str 00000077  00000000  00000000  001f9c54  2**0
+ 18 .debug_line_str 00000077  00000000  00000000  001c7b30  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -171,11 +171,11 @@ int main(void)
  80002f4:	4906      	ldr	r1, [pc, #24]	@ (8000310 <main+0x98>)
  80002f6:	4805      	ldr	r0, [pc, #20]	@ (800030c <main+0x94>)
  80002f8:	f001 ff5c 	bl	80021b4 <HAL_ADC_Start_DMA>
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
 
+    /* USER CODE BEGIN 3 */
 	  if(ADC_eoc_Flag)
  80002fc:	bf00      	nop
  80002fe:	e7fd      	b.n	80002fc <main+0x84>

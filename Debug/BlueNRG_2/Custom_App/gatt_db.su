@@ -1,0 +1,5 @@
+../BlueNRG_2/Custom_App/gatt_db.c:63:12:Add_HWServW2ST_Service	64	static
+../BlueNRG_2/Custom_App/gatt_db.c:116:12:Res_Update	64	static
+../BlueNRG_2/Custom_App/gatt_db.c:144:12:Cap_Update	88	static
+../BlueNRG_2/Custom_App/gatt_db.c:173:6:Read_Request_CB	24	static
+../BlueNRG_2/Custom_App/gatt_db.c:206:6:Attribute_Modified_Request_CB	16	static

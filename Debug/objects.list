@@ -1,3 +1,6 @@
+"./BlueNRG_2/Custom_App/app_bluenrg_2.o"
+"./BlueNRG_2/Custom_App/gatt_db.o"
+"./BlueNRG_2/Custom_App/sensor.o"
 "./BlueNRG_2/Target/hci_tl_interface.o"
 "./Core/Src/custom_bus.o"
 "./Core/Src/main.o"

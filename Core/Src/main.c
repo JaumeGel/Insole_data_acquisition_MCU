@@ -89,13 +89,13 @@ TIM_HandleTypeDef htim17;
 /* USER CODE BEGIN PV */
 
 	/*DAC Variables*/
-uint16_t DAC_Value1;
-uint16_t DAC_Value2;
+uint16_t DAC_Value1;	//12-bit value for output of DAC1
+uint16_t DAC_Value2;	//12-bit value for output of DAC2
 
 	/*ADC Variables*/
-uint32_t ADC_Values[15];
-uint16_t R_Values[15];
-uint8_t ADC_eoc_Flag = 0;
+uint32_t ADC_Values[15];	//32-bit result variables from ADC
+uint16_t R_Values[15];		//16-bit converter readout values from ADC
+uint8_t ADC_eoc_Flag = 0;	//End of Conversion flag after each ADC scan conversion
 
 /* USER CODE END PV */
 
@@ -188,12 +188,11 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
+    /* USER CODE BEGIN 3 */
 	  if(ADC_eoc_Flag)
 	  {
 
 	  }
-
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
