@@ -65,7 +65,7 @@ tBleStatus Add_HWServW2ST_Service(void)
   tBleStatus ret;
   uint8_t uuid[16];
   /* num of characteristics of this service */
-  uint8_t char_number = 5;
+  uint8_t char_number = 2;
   /* number of attribute records that can be added to this service */
   uint8_t max_attribute_records = 1+(3*char_number);
 
@@ -176,11 +176,11 @@ void Read_Request_CB(uint16_t handle)
 
   if(handle == CapCharHandle + 1)
   {
-    Cap_Update(&CapMeasurements);
+    Cap_Update(CapMeasurements);
   }
   else if (handle == ResCharHandle + 1)
   {
-    Res_Update(&ResMeasurements);
+    Res_Update(ResMeasurements);
   }
 
   if(connection_handle !=0)

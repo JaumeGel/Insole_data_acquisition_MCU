@@ -21,6 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "app_bluenrg_2.h"
+#include "custom.h"
 
 /* USER CODE END Includes */
 
@@ -53,8 +55,16 @@
 #define P_CE	1		// 0: Charging Disabled
 						// 1: Charging Enabled
 
-//BlueNRG-M2
-
+	/*BlueNRG-M2*/
+//Transmission bluetooth power
+#define TxPower	7		// 0: -15dBm
+						// 1: -12dBm
+						// 2: -8dBm
+						// 3: -5dBm
+						// 4: -2dBm
+						// 5: +1dBm
+						// 6: +5dBm
+						// 7: +8dBm
 
 //PCAP04 Capacitance sensors
 
@@ -96,6 +106,9 @@ uint16_t DAC_Value2;	//12-bit value for output of DAC2
 uint32_t ADC_Values[15];	//32-bit result variables from ADC
 uint16_t R_Values[15];		//16-bit converter readout values from ADC
 uint8_t ADC_eoc_Flag = 0;	//End of Conversion flag after each ADC scan conversion
+
+	/*Capacitive Reading Variables*/
+uint32_t C_Values[15];
 
 /* USER CODE END PV */
 
@@ -162,6 +175,7 @@ int main(void)
   	  /*Peripheral initialization*/
   P_Charger_Init();
   CAN_Transceiver_Init();
+  MX_BlueNRG_2_Init(TxPower);
 
   	  /*DAC Initialization and setup*/
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
@@ -191,7 +205,7 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	  if(ADC_eoc_Flag)
 	  {
-
+		  MX_BlueNRG_2_UpdateData(R_Values, C_Values, RES_ONLY);
 	  }
   }
   /* USER CODE END 3 */
