@@ -1,0 +1,6 @@
+../PCAP04/user_spi_interface.c:73:6:Set_SSN	6
+../PCAP04/user_spi_interface.c:115:6:Write_Opcode	1
+../PCAP04/user_spi_interface.c:145:6:Write_Byte_Auto_Incr	3
+../PCAP04/user_spi_interface.c:198:6:Read_Byte_Auto_Incr	2
+../PCAP04/user_spi_interface.c:247:9:Read_Byte2	1
+../PCAP04/user_spi_interface.c:281:10:Read_Dword_Lite	1

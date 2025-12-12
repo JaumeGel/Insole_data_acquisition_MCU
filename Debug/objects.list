@@ -45,3 +45,4 @@
 "./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_l2cap_aci.o"
 "./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o"
 "./Middlewares/ST/BlueNRG-2/utils/ble_list.o"
+"./PCAP04/user_spi_interface.o"

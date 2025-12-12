@@ -31,4 +31,5 @@ Middlewares/ST/BlueNRG-2/hci \
 Middlewares/ST/BlueNRG-2/hci/controller \
 Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic \
 Middlewares/ST/BlueNRG-2/utils \
+PCAP04 \
 

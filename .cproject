@@ -53,6 +53,7 @@
 									<listOptionValue builtIn="false" value="../Middlewares/ST/BlueNRG-2/includes"/>
 									<listOptionValue builtIn="false" value="../BlueNRG_2/Target"/>
 									<listOptionValue builtIn="false" value="../BlueNRG_2/Custom_App"/>
+									<listOptionValue builtIn="false" value="../PCAP04"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1479058309" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -81,8 +82,9 @@
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="BlueNRG_2"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="PCAP04"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -135,6 +137,8 @@
 									<listOptionValue builtIn="false" value="../Middlewares/ST/BlueNRG-2/utils"/>
 									<listOptionValue builtIn="false" value="../Middlewares/ST/BlueNRG-2/includes"/>
 									<listOptionValue builtIn="false" value="../BlueNRG_2/Target"/>
+									<listOptionValue builtIn="false" value="../BlueNRG_2/Custom_App"/>
+									<listOptionValue builtIn="false" value="../PCAP04"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1069992415" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -163,8 +167,9 @@
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="BlueNRG_2"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="PCAP04"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

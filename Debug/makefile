@@ -9,6 +9,7 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include PCAP04/subdir.mk
 -include Middlewares/ST/BlueNRG-2/utils/subdir.mk
 -include Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/subdir.mk
 -include Middlewares/ST/BlueNRG-2/hci/controller/subdir.mk

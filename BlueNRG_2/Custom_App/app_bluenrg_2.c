@@ -317,12 +317,12 @@ static void Update_Data(uint16_t Resistive[], uint32_t Capacitive[], uint8_t Dat
 
     if (paired)
     {
-      if ((send_res) && (Dataselect != 2)) {
+      if ((send_res) && ((Dataselect == 0) || (Dataselect == 1))) {
         /* Update Resistive data */
         Res_Update(Resistive);
       }
 
-      if ((send_cap) && (Dataselect != 1)) {
+      if ((send_cap) && ((Dataselect == 0) || (Dataselect == 2))) {
         /* Update Capacitive data */
     	Cap_Update(Capacitive);
       }
