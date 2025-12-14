@@ -1,7 +1,7 @@
 ../BlueNRG_2/Custom_App/app_bluenrg_2.c:85:6:MX_BlueNRG_2_Init	2
 ../BlueNRG_2/Custom_App/app_bluenrg_2.c:128:6:MX_BlueNRG_2_UpdateData	1
 ../BlueNRG_2/Custom_App/app_bluenrg_2.c:148:9:Sensor_DeviceInit	7
-../BlueNRG_2/Custom_App/app_bluenrg_2.c:295:13:Update_Data	9
+../BlueNRG_2/Custom_App/app_bluenrg_2.c:295:13:Update_Data	11
 ../BlueNRG_2/Custom_App/app_bluenrg_2.c:339:9:getBlueNRGVersion	2
 ../BlueNRG_2/Custom_App/app_bluenrg_2.c:365:6:hci_le_connection_complete_event	1
 ../BlueNRG_2/Custom_App/app_bluenrg_2.c:393:6:hci_disconnection_complete_event	1

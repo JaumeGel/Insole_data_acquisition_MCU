@@ -108,7 +108,7 @@ void Set_SSN(uint8_t channel, uint8_t level)
 /******************************************************************************/
 /**
   * @brief  Write one byte Opcode.
-  * @param  chan: channel to write into
+  * @param  chan: channel to write into (1, 2 or 3)
   * @param  one_byte
   * @retval none
   */
@@ -135,7 +135,7 @@ void Write_Opcode(uint8_t chan, uint8_t one_byte)
 /******************************************************************************/
 /**
   * @brief  Write bytes incrementally.
-  * @param  chan: channel to write into
+  * @param  chan: channel to write into (1, 2 or 3)
   * @param  opcode (byte)
   * @param  address (byte)
   * @param  byte_array
@@ -188,7 +188,7 @@ void Write_Byte_Auto_Incr(uint8_t chan, int opcode, int address, uint8_t *byte_a
 /******************************************************************************/
 /**
   * @brief  Read byte array auto incrementally.
-  * @param  chan: channel to read from
+  * @param  chan: channel to read from (1, 2 or 3)
   * @param  opcode (byte),       "Byte2",       Bit[7:2]
   * @param  address (byte 1),    "Byte2+Byte1", Bit[9:0]
   * @param  byte array (byte 0), "Byte0"
@@ -240,7 +240,7 @@ void Read_Byte_Auto_Incr(uint8_t chan, int opcode, int address, uint8_t *spiRX, 
 /******************************************************************************/
 /**
   * @brief  Read byte.
-  * @param  chan: channel to read from
+  * @param  chan: channel to read from (1, 2 or 3)
   * @param  opcode (byte)
   * @retval 8-bit value
   */
@@ -273,7 +273,7 @@ uint8_t Read_Byte2(uint8_t chan, uint8_t rd_opcode)
 /******************************************************************************/
 /**
   * @brief  Read double word.
-  * @param  chan: channel to read from
+  * @param  chan: channel to read from (1, 2 or 3)
   * @param  opcode (byte)
   * @param  address (byte)
   * @retval 32-bit value

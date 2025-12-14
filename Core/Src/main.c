@@ -39,7 +39,7 @@
 	/*Sensor Selection*/
 //Select which sensors to measure
 	//RES_ONLY, CAP_ONLY, RES_CAP, NONE
-#define Measure_Select RES_ONLY
+#define Measure_Select RES_CAP
 
 	/*CAN Defines*/
 //CAN_ID: CAN Bus Identifier in hexadecimal
@@ -138,6 +138,10 @@ uint8_t INTN_1_State = 1;
 uint8_t INTN_2_State = 1;
 uint8_t INTN_3_State = 1;
 
+uint8_t CAP1_Updated = 0;
+uint8_t CAP2_Updated = 0;
+uint8_t CAP3_Updated = 0;
+
 uint8_t PCAP_Buf[256] = {0x12,0x34};
 uint8_t PCAP1_OK = 0;	//Will set to 1 if all verifications are successful
 uint8_t PCAP2_OK = 0;
@@ -218,7 +222,9 @@ static void P_Charger_Init(void);
 static void CAN_Transceiver_Init(void);
 static uint8_t PCAP_Init(uint8_t channel, uint8_t State);
 
+#if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
+#endif
 
 /* USER CODE END PFP */
 
@@ -265,23 +271,23 @@ int main(void)
   MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
 
+  HAL_GPIO_WritePin(GPIOC, LED_Ind_Pin, GPIO_PIN_SET);
+
   	  /*Peripheral initialization*/
   P_Charger_Init();
   CAN_Transceiver_Init();
   MX_BlueNRG_2_Init(TxPower);
 
   //Test and Startup of PCAP04 ICs
-  if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
-  {
+  #if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
 	PCAP1_OK = PCAP_Init(1, ON);
 	PCAP2_OK = PCAP_Init(2, ON);
 	PCAP3_OK = PCAP_Init(3, ON);
-  }else
-  {
+  #else
 	PCAP1_OK = PCAP_Init(1, OFF);
 	PCAP2_OK = PCAP_Init(2, OFF);
 	PCAP3_OK = PCAP_Init(3, OFF);
-  }
+  #endif
 
   	  /*DAC Initialization and setup*/
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
@@ -299,6 +305,7 @@ int main(void)
 
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
 
+  HAL_GPIO_WritePin(GPIOC, LED_Ind_Pin, GPIO_PIN_RESET);
 
   /* USER CODE END 2 */
 
@@ -309,11 +316,62 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	if(ADC_eoc_Flag)
-	{
-		MX_BlueNRG_2_UpdateData(R_Values, C_Values, Measure_Select);
 
-	}
+	#if ((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
+		if(INTN_1_State == 1)
+		{
+			C_Values[0] = Read_Dword_Lite(1, 0x40, 0x04);
+			C_Values[1] = Read_Dword_Lite(1, 0x40, 0x08);
+			C_Values[2] = Read_Dword_Lite(1, 0x40, 0x0C);
+			C_Values[3] = Read_Dword_Lite(1, 0x40, 0x10);
+			C_Values[4] = Read_Dword_Lite(1, 0x40, 0x14);
+			INTN_1_State = 0;
+			CAP1_Updated = 1;
+		}
+		if(INTN_2_State == 1)
+		{
+			C_Values[5] = Read_Dword_Lite(2, 0x40, 0x04);
+			C_Values[6] = Read_Dword_Lite(2, 0x40, 0x08);
+			C_Values[7] = Read_Dword_Lite(2, 0x40, 0x0C);
+			C_Values[8] = Read_Dword_Lite(2, 0x40, 0x10);
+			C_Values[9] = Read_Dword_Lite(2, 0x40, 0x14);
+			INTN_2_State = 0;
+			CAP2_Updated = 1;
+		}
+		if(INTN_3_State == 1)
+		{
+			C_Values[10] = Read_Dword_Lite(3, 0x40, 0x04);
+			C_Values[11] = Read_Dword_Lite(3, 0x40, 0x08);
+			C_Values[12] = Read_Dword_Lite(3, 0x40, 0x0C);
+			C_Values[13] = Read_Dword_Lite(3, 0x40, 0x10);
+			C_Values[14] = Read_Dword_Lite(3, 0x40, 0x14);
+			INTN_3_State = 0;
+			CAP3_Updated = 1;
+		}
+	#endif
+
+	#if Measure_Select != NONE
+		if(ADC_eoc_Flag && CAP1_Updated && CAP2_Updated && CAP3_Updated)
+		{
+			MX_BlueNRG_2_UpdateData(R_Values, C_Values, Measure_Select);
+			ADC_eoc_Flag = 0;
+			CAP1_Updated = CAP2_Updated = CAP3_Updated = 0;
+			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
+		}else if (ADC_eoc_Flag && (Measure_Select != CAP_ONLY))
+		{
+			MX_BlueNRG_2_UpdateData(R_Values, C_Values, RES_ONLY);
+			ADC_eoc_Flag = 0;
+			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
+		}else if(CAP1_Updated && CAP2_Updated && CAP3_Updated && (Measure_Select != RES_ONLY))
+		{
+			MX_BlueNRG_2_UpdateData(R_Values, C_Values, CAP_ONLY);
+			CAP1_Updated = CAP2_Updated = CAP3_Updated = 0;
+			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
+		}else
+		{
+
+		}
+	#endif
   }
   /* USER CODE END 3 */
 }
@@ -1048,10 +1106,10 @@ static uint8_t PCAP_Init(uint8_t channel, uint8_t State)
 
 	// Write configuration (52 Bytes) with additional write verification
 	Write_Byte_Auto_Incr(channel, WR_CONFIG, 0x00, standard_cfg_bytewise, 52);
-	Read_Byte_Auto_Incr(channel, RD_CONFIG, 0x00, PCAP_buf, 52);
+	Read_Byte_Auto_Incr(channel, RD_CONFIG, 0x00, PCAP_Buf, 52);
 	for(int i = 0; i < 52; i++)
 	{
-		if(PCAP_Buf[i] != standard_cfg[i])
+		if(PCAP_Buf[i] != standard_cfg_bytewise[i])
 		{
 			return 0;
 		}
@@ -1068,28 +1126,41 @@ static uint8_t PCAP_Init(uint8_t channel, uint8_t State)
 
 void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 {
-	for(int i=0;i<15;i++)
+	if(ADC_eoc_Flag == 0)
 	{
-		R_Values[i] = (uint16_t)ADC_Values[i];
+		for(int i=0;i<15;i++)
+		{
+			R_Values[i] = (uint16_t)ADC_Values[i];
+		}
+		ADC_eoc_Flag = 1;
 	}
-	ADC_eoc_Flag = 1;
+
 }
 
+	/*Only process SPI2 interrupts when Measuring Capacitive Sensors*/
+#if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
+/**
+  * @brief  Handle External Interrupts.
+  * @param	GPIO_Pin: Pin that triggered the interrupt
+  * @retval none
+  */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+	//Set INTN_X_State to 1 when incoming signal is set to Low
 	if(GPIO_Pin == C1_INTN_Pin)
 	{
-		INTN_1_State = 1;
+		INTN_1_State = (HAL_GPIO_ReadPin(GPIOA, C1_INTN_Pin) == GPIO_PIN_RESET);	//INTN low active
 	}
 	if(GPIO_Pin == C2_INTN_Pin)
 	{
-		INTN_2_State = 1;
+		INTN_2_State = (HAL_GPIO_ReadPin(GPIOA, C2_INTN_Pin) == GPIO_PIN_RESET);	//INTN low active
 	}
 	if(GPIO_Pin == C3_INTN_Pin)
 	{
-		INTN_3_State = 1;
+		INTN_3_State = (HAL_GPIO_ReadPin(GPIOA, C3_INTN_Pin) == GPIO_PIN_RESET);	//INTN low active
 	}
 }
+#endif
 
 /* USER CODE END 4 */
 
