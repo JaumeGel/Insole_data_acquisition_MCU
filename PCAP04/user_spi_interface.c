@@ -66,8 +66,8 @@ extern SPI_HandleTypeDef hspi2;
   * 		@arg 2: CS2 Device 2
   * 		@arg 3: CS3 Device 3
   * @param  level specifies the level to be written to SSN pin
-  * 		@arg LOW: to clear the SSN pin
-  * 		@arg HIGH: to set the SSN pin
+  * 		@arg PCAP_LOW: to clear the SSN pin
+  * 		@arg PCAP_HIGH: to set the SSN pin
   * @retval none
   */
 void Set_SSN(uint8_t channel, uint8_t level)
@@ -91,9 +91,9 @@ void Set_SSN(uint8_t channel, uint8_t level)
 	{
 		return;
 	}
-	if(level == LOW) {
+	if(level == PCAP_LOW) {
 		HAL_GPIO_WritePin(SSN_Port, SSN_Pin, GPIO_PIN_RESET);
-	}else if(level == HIGH) {
+	}else if(level == PCAP_HIGH) {
 		HAL_GPIO_WritePin(SSN_Port, SSN_Pin, GPIO_PIN_SET);
 	}else
 	{
@@ -118,13 +118,13 @@ void Write_Opcode(uint8_t chan, uint8_t one_byte)
   uint8_t timeout = 10;
 
   /* 1. Put SSN low - Activate */
-  Set_SSN(chan, LOW);
+  Set_SSN(chan, PCAP_LOW);
 
   /* 2. Transmit register address */
   HAL_SPI_Transmit(&hspi2, &one_byte, 1, timeout);
 
   /* 3. Put SSN high - Deactivate */
-  Set_SSN(chan, HIGH);
+  Set_SSN(chan, PCAP_HIGH);
 
   return;
 }
@@ -164,7 +164,7 @@ void Write_Byte_Auto_Incr(uint8_t chan, int opcode, int address, uint8_t *byte_a
   }
 
   /* 1. Put SSN low - Activate */
-  Set_SSN(chan, LOW);
+  Set_SSN(chan, PCAP_LOW);
 
   /* 2.a Transmit register address */
   HAL_SPI_Transmit(&hspi2, spiTX, 2, timeout);
@@ -177,7 +177,7 @@ void Write_Byte_Auto_Incr(uint8_t chan, int opcode, int address, uint8_t *byte_a
   }
 
   /* 3. Put SSN high - Deactivate */
-  Set_SSN(chan, HIGH);
+  Set_SSN(chan, PCAP_HIGH);
 
   return;
 }
@@ -220,7 +220,7 @@ void Read_Byte_Auto_Incr(uint8_t chan, int opcode, int address, uint8_t *spiRX, 
   }
 
   /* 1. Put SSN low - Activate */
-  Set_SSN(chan, LOW);
+  Set_SSN(chan, PCAP_LOW);
 
   /* 2. Transmit register address */
   HAL_SPI_Transmit(&hspi2, spiTX, 2, timeout);
@@ -229,7 +229,7 @@ void Read_Byte_Auto_Incr(uint8_t chan, int opcode, int address, uint8_t *spiRX, 
   HAL_SPI_Receive(&hspi2, spiRX, n_byte, timeout);
 
   /* 4. Put SSN high - Deactivate */
-  Set_SSN(chan, HIGH);
+  Set_SSN(chan, PCAP_HIGH);
 
   return;
 }
@@ -254,7 +254,7 @@ uint8_t Read_Byte2(uint8_t chan, uint8_t rd_opcode)
   spiTX[0] = rd_opcode;
 
   /* 1. Put SSN low - Activate */
-  Set_SSN(chan, LOW);
+  Set_SSN(chan, PCAP_LOW);
 
   /* 2. Transmit register address */
   HAL_SPI_Transmit(&hspi2, spiTX, 1, timeout);
@@ -263,7 +263,7 @@ uint8_t Read_Byte2(uint8_t chan, uint8_t rd_opcode)
   HAL_SPI_Receive(&hspi2, spiRX, 1, timeout);
 
   /* 4. Put SSN high - Deactivate */
-  Set_SSN(chan, HIGH);
+  Set_SSN(chan, PCAP_HIGH);
 
   return spiRX[0];
 }
@@ -289,7 +289,7 @@ uint32_t Read_Dword_Lite(uint8_t chan, uint8_t rd_opcode, uint8_t address)
   spiTX[0] = rd_opcode | address;
 
   /* 1. Put SSN low - Activate */
-  Set_SSN(chan, LOW);
+  Set_SSN(chan, PCAP_LOW);
 
   /* 2. Transmit register address */
   HAL_SPI_Transmit(&hspi2, spiTX, 1, timeout);
@@ -298,10 +298,10 @@ uint32_t Read_Dword_Lite(uint8_t chan, uint8_t rd_opcode, uint8_t address)
   HAL_SPI_Receive(&hspi2, spiRX, 4, timeout);
 
   /* 4. Put SSN high - Deactivate */
-  Set_SSN(chan, HIGH);
+  Set_SSN(chan, PCAP_HIGH);
 
   /*Concatenate of bytes (from LSB to MSB), e.g. used by PICOCAP */
-  temp_u32 = (spiRX[3]<<24) + (spiRX[2]<<16) + (spiRX[1]<<8) + (spiRX[0]);
+  temp_u32 = ((uint32_t)spiRX[3] << 24) | ((uint32_t)spiRX[2] << 16) | ((uint32_t)spiRX[1] << 8) | ((uint32_t)spiRX[0]);
 
   return temp_u32;
 }

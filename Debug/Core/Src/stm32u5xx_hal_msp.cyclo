@@ -7,5 +7,3 @@
 ../Core/Src/stm32u5xx_hal_msp.c:373:6:HAL_FDCAN_MspDeInit	2
 ../Core/Src/stm32u5xx_hal_msp.c:405:6:HAL_SPI_MspInit	3
 ../Core/Src/stm32u5xx_hal_msp.c:457:6:HAL_SPI_MspDeInit	2
-../Core/Src/stm32u5xx_hal_msp.c:489:6:HAL_TIM_Base_MspInit	2
-../Core/Src/stm32u5xx_hal_msp.c:515:6:HAL_TIM_Base_MspDeInit	2

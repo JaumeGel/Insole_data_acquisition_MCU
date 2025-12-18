@@ -39,7 +39,7 @@
  * displayed.
  */
 #define SECURE_PAIRING (0)
-#define PERIPHERAL_PASS_KEY (12345678)
+#define PERIPHERAL_PASS_KEY (123456)
 
 /* Private macros ------------------------------------------------------------*/
 
@@ -53,8 +53,12 @@ extern volatile uint8_t connected;
 extern volatile uint8_t pairing;
 extern volatile uint8_t paired;
 uint8_t bdaddr[BDADDR_SIZE];
-extern __IO uint8_t send_res;
-extern __IO uint8_t send_cap;
+extern __IO uint8_t send_res1;
+extern __IO uint8_t send_res2;
+extern __IO uint8_t send_cap1;
+extern __IO uint8_t send_cap2;
+extern __IO uint8_t send_cap3;
+extern __IO uint8_t send_cap4;
 
 /* USER CODE BEGIN PV */
 
@@ -317,14 +321,30 @@ static void Update_Data(uint16_t Resistive[], uint32_t Capacitive[], uint8_t Dat
 
     if (paired)
     {
-      if ((send_res) && ((Dataselect == 0) || (Dataselect == 1))) {
+      if ((send_res1) && ((Dataselect == 0) || (Dataselect == 1))) {
         /* Update Resistive data */
-        Res_Update(Resistive);
+        Res1_Update(Resistive);
       }
+      if ((send_res2) && ((Dataselect == 0) || (Dataselect == 1))) {
+	    /* Update Resistive data */
+	    Res2_Update(Resistive);
+	  }
 
-      if ((send_cap) && ((Dataselect == 0) || (Dataselect == 2))) {
+      if ((send_cap1) && ((Dataselect == 0) || (Dataselect == 2))) {
         /* Update Capacitive data */
-    	Cap_Update(Capacitive);
+    	Cap1_Update(Capacitive);
+      }
+      if ((send_cap2) && ((Dataselect == 0) || (Dataselect == 2))) {
+    	/* Update Capacitive data */
+    	Cap2_Update(Capacitive);
+      }
+      if ((send_cap3) && ((Dataselect == 0) || (Dataselect == 2))) {
+		/* Update Capacitive data */
+		Cap3_Update(Capacitive);
+      }
+      if ((send_cap4) && ((Dataselect == 0) || (Dataselect == 2))) {
+		/* Update Capacitive data */
+		Cap4_Update(Capacitive);
       }
     }
 }

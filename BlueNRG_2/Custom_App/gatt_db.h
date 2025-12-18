@@ -27,7 +27,11 @@ tBleStatus Add_HWServW2ST_Service(void);
 void Read_Request_CB(uint16_t handle);
 void Attribute_Modified_Request_CB(uint16_t Connection_Handle, uint16_t attr_handle,
                                    uint16_t Offset, uint8_t data_length, uint8_t *att_data);
-tBleStatus Res_Update(uint16_t resistive[]);
-tBleStatus Cap_Update(uint32_t capacitive[]);
+tBleStatus Res1_Update(uint16_t resistive[]);
+tBleStatus Res2_Update(uint16_t resistive[]);
+tBleStatus Cap1_Update(uint32_t capacitive[]);
+tBleStatus Cap2_Update(uint32_t capacitive[]);
+tBleStatus Cap3_Update(uint32_t capacitive[]);
+tBleStatus Cap4_Update(uint32_t capacitive[]);
 
 #endif /* GATT_DB_H */

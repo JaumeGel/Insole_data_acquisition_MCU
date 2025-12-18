@@ -117,8 +117,6 @@ FDCAN_HandleTypeDef hfdcan1;
 
 SPI_HandleTypeDef hspi2;
 
-TIM_HandleTypeDef htim17;
-
 /* USER CODE BEGIN PV */
 
 	/*DAC Variables*/
@@ -126,17 +124,17 @@ uint16_t DAC_Value1;	//12-bit value for output of DAC1
 uint16_t DAC_Value2;	//12-bit value for output of DAC2
 
 	/*ADC Variables*/
-uint32_t ADC_Values[15];	//32-bit result variables from ADC
-uint16_t R_Values[15];		//16-bit converter readout values from ADC
-uint8_t ADC_eoc_Flag = 0;	//End of Conversion flag after each ADC scan conversion
+volatile uint32_t ADC_Values[15];	//32-bit result variables from ADC
+uint16_t R_Values[15];		//14-bit converted readout values from ADC saved into 16-bit length
+volatile uint8_t ADC_eoc_Flag = 0;	//End of Conversion flag after each ADC scan conversion
 
 	/*Capacitive Reading Variables*/
 uint32_t C_Values[15];
 
 	/*PCAP04 variables declarations*/
-uint8_t INTN_1_State = 1;
-uint8_t INTN_2_State = 1;
-uint8_t INTN_3_State = 1;
+volatile uint8_t INTN_1_State = 1;
+volatile uint8_t INTN_2_State = 1;
+volatile uint8_t INTN_3_State = 1;
 
 uint8_t CAP1_Updated = 0;
 uint8_t CAP2_Updated = 0;
@@ -215,7 +213,6 @@ static void MX_ADC1_Init(void);
 static void MX_DAC1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_ICACHE_Init(void);
-static void MX_TIM17_Init(void);
 /* USER CODE BEGIN PFP */
 
 static void P_Charger_Init(void);
@@ -268,7 +265,6 @@ int main(void)
   MX_DAC1_Init();
   MX_SPI2_Init();
   MX_ICACHE_Init();
-  MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
 
   HAL_GPIO_WritePin(GPIOC, LED_Ind_Pin, GPIO_PIN_SET);
@@ -280,13 +276,13 @@ int main(void)
 
   //Test and Startup of PCAP04 ICs
   #if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
-	PCAP1_OK = PCAP_Init(1, ON);
-	PCAP2_OK = PCAP_Init(2, ON);
-	PCAP3_OK = PCAP_Init(3, ON);
+	PCAP1_OK = PCAP_Init(1, PCAP_ON);
+	PCAP2_OK = PCAP_Init(2, PCAP_ON);
+	PCAP3_OK = PCAP_Init(3, PCAP_ON);
   #else
-	PCAP1_OK = PCAP_Init(1, OFF);
-	PCAP2_OK = PCAP_Init(2, OFF);
-	PCAP3_OK = PCAP_Init(3, OFF);
+	PCAP1_OK = PCAP_Init(1, PCAP_OFF);
+	PCAP2_OK = PCAP_Init(2, PCAP_OFF);
+	PCAP3_OK = PCAP_Init(3, PCAP_OFF);
   #endif
 
   	  /*DAC Initialization and setup*/
@@ -294,8 +290,8 @@ int main(void)
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
 
   //DAC output value calculation. Mapping 0 - 3.3V to 0 - 2^12 bits
-  DAC_Value1 = (Voff1*10/33)*4095;
-  DAC_Value2 = (Voff2*10/33)*4095;
+  DAC_Value1 = (uint16_t)((Voff1 / 3.3f) * 4095.0f);
+  DAC_Value2 = (uint16_t)((Voff2 / 3.3f) * 4095.0f);
 
   HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, DAC_Value1);
   HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_2, DAC_ALIGN_12B_R, DAC_Value2);
@@ -353,14 +349,24 @@ int main(void)
 	#if Measure_Select != NONE
 		if(ADC_eoc_Flag && CAP1_Updated && CAP2_Updated && CAP3_Updated)
 		{
+			for(int i=0;i<15;i++)
+			{
+				R_Values[i] = (uint16_t)ADC_Values[i];
+			}
 			MX_BlueNRG_2_UpdateData(R_Values, C_Values, Measure_Select);
 			ADC_eoc_Flag = 0;
 			CAP1_Updated = CAP2_Updated = CAP3_Updated = 0;
+			HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
 			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
 		}else if (ADC_eoc_Flag && (Measure_Select != CAP_ONLY))
 		{
+			for(int i=0;i<15;i++)
+			{
+				R_Values[i] = (uint16_t)ADC_Values[i];
+			}
 			MX_BlueNRG_2_UpdateData(R_Values, C_Values, RES_ONLY);
 			ADC_eoc_Flag = 0;
+			HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
 			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
 		}else if(CAP1_Updated && CAP2_Updated && CAP3_Updated && (Measure_Select != RES_ONLY))
 		{
@@ -842,38 +848,6 @@ static void MX_SPI2_Init(void)
 }
 
 /**
-  * @brief TIM17 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM17_Init(void)
-{
-
-  /* USER CODE BEGIN TIM17_Init 0 */
-
-  /* USER CODE END TIM17_Init 0 */
-
-  /* USER CODE BEGIN TIM17_Init 1 */
-
-  /* USER CODE END TIM17_Init 1 */
-  htim17.Instance = TIM17;
-  htim17.Init.Prescaler = 6400-1;
-  htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim17.Init.Period = 9999;
-  htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim17.Init.RepetitionCounter = 0;
-  htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM17_Init 2 */
-
-  /* USER CODE END TIM17_Init 2 */
-
-}
-
-/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -990,16 +964,16 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI6_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI6_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(EXTI6_IRQn);
 
-  HAL_NVIC_SetPriority(EXTI8_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI8_IRQn, 2, 0);
   HAL_NVIC_EnableIRQ(EXTI8_IRQn);
 
-  HAL_NVIC_SetPriority(EXTI9_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI9_IRQn, 2, 0);
   HAL_NVIC_EnableIRQ(EXTI9_IRQn);
 
-  HAL_NVIC_SetPriority(EXTI10_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(EXTI10_IRQn, 2, 0);
   HAL_NVIC_EnableIRQ(EXTI10_IRQn);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
@@ -1072,8 +1046,8 @@ static void CAN_Transceiver_Init(void)
   * 		@arg 2: CS2 Device 2
   * 		@arg 3: CS3 Device 3
   * @param  State defines Activity state of device
-  * 		@arg ON:  Device is initialized and functioning fully
-  * 		@arg OFF: Device is initialized and Front-End and DSP disabled
+  * 		@arg PCAP_ON:  Device is initialized and functioning fully
+  * 		@arg PCAP_OFF: Device is initialized and Front-End and DSP disabled
   * @retval Initialized correctness status
   */
 static uint8_t PCAP_Init(uint8_t channel, uint8_t State)
@@ -1091,8 +1065,8 @@ static uint8_t PCAP_Init(uint8_t channel, uint8_t State)
 	HAL_Delay(10);
 
 	// Write firmware with additional write verification of e.g. 100 bytes
-	Write_Byte_Auto_Incr(channel, WR_MEM, 0x00, standard_fw, 548);
-	Read_Byte_Auto_Incr(channel, RD_MEM, 0x00, PCAP_Buf, 100);
+	Write_Byte_Auto_Incr(channel, WR_MEM, 0x00, standard_fw, 547);
+	Read_Byte_Auto_Incr(channel, RD_MEM, 0x00, PCAP_Buf, 99);
 	for(int i = 0; i < 100; i++)
 	{
 		if(PCAP_Buf[i] != standard_fw[i])
@@ -1105,8 +1079,8 @@ static uint8_t PCAP_Init(uint8_t channel, uint8_t State)
 	standard_cfg_bytewise[47] = State;
 
 	// Write configuration (52 Bytes) with additional write verification
-	Write_Byte_Auto_Incr(channel, WR_CONFIG, 0x00, standard_cfg_bytewise, 52);
-	Read_Byte_Auto_Incr(channel, RD_CONFIG, 0x00, PCAP_Buf, 52);
+	Write_Byte_Auto_Incr(channel, WR_CONFIG, 0x00, standard_cfg_bytewise, 51);
+	Read_Byte_Auto_Incr(channel, RD_CONFIG, 0x00, PCAP_Buf, 51);
 	for(int i = 0; i < 52; i++)
 	{
 		if(PCAP_Buf[i] != standard_cfg_bytewise[i])
@@ -1128,10 +1102,6 @@ void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 {
 	if(ADC_eoc_Flag == 0)
 	{
-		for(int i=0;i<15;i++)
-		{
-			R_Values[i] = (uint16_t)ADC_Values[i];
-		}
 		ADC_eoc_Flag = 1;
 	}
 

@@ -31,11 +31,11 @@
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
 
-#define LOW ((uint8_t)0)
-#define HIGH ((uint8_t)1)
+#define PCAP_LOW 	((uint8_t)0)
+#define PCAP_HIGH 	((uint8_t)1)
 
-#define ON	((uint8_t)1)
-#define OFF ((uint8_t)0)
+#define PCAP_ON		((uint8_t)1)
+#define PCAP_OFF 	((uint8_t)0)
 
 /* USER CODE END EC */
 

@@ -350,7 +350,7 @@ static void SPI1_MspInit(SPI_HandleTypeDef* spiHandle)
     HAL_GPIO_Init(BUS_SPI1_MOSI_GPIO_PORT, &GPIO_InitStruct);
 
     /* Peripheral interrupt init */
-    HAL_NVIC_SetPriority(SPI1_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(SPI1_IRQn, 1, 0);
     HAL_NVIC_EnableIRQ(SPI1_IRQn);
   /* USER CODE BEGIN SPI1_MspInit 1 */
 

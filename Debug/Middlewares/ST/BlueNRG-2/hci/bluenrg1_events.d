@@ -42,8 +42,6 @@ Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o: \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pwr_ex.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_spi.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_spi_ex.h \
- ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_tim.h \
- ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_tim_ex.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_fdcan.h \
  ../Core/Inc/custom_errno.h \
@@ -99,8 +97,6 @@ Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o: \
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_pwr_ex.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_spi.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_spi_ex.h:
-../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_tim.h:
-../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_tim_ex.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_fdcan.h:
 ../Core/Inc/custom_errno.h:

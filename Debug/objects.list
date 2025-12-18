@@ -33,8 +33,6 @@
 "./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o"
 "./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o"
 "./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o"
-"./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_tim.o"
-"./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_tim_ex.o"
 "./Middlewares/ST/BlueNRG-2/hci/bluenrg1_devConfig.o"
 "./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o"
 "./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o"
