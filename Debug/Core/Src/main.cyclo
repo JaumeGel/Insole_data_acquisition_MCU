@@ -1,4 +1,4 @@
-../Core/Src/main.c:237:5:main	14
+../Core/Src/main.c:237:5:main	8
 ../Core/Src/main.c:389:6:SystemClock_Config	4
 ../Core/Src/main.c:447:13:MX_ADC1_Init	17
 ../Core/Src/main.c:634:13:MX_DAC1_Init	5
@@ -11,5 +11,4 @@
 ../Core/Src/main.c:1031:13:CAN_Transceiver_Init	1
 ../Core/Src/main.c:1053:16:PCAP_Init	7
 ../Core/Src/main.c:1101:6:HAL_ADC_ConvCpltCallback	2
-../Core/Src/main.c:1117:6:HAL_GPIO_EXTI_Callback	4
 ../Core/Src/main.c:1141:6:Error_Handler	1

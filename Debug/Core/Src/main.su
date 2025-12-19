@@ -11,5 +11,4 @@
 ../Core/Src/main.c:1031:13:CAN_Transceiver_Init	8	static
 ../Core/Src/main.c:1053:16:PCAP_Init	32	static
 ../Core/Src/main.c:1101:6:HAL_ADC_ConvCpltCallback	16	static
-../Core/Src/main.c:1117:6:HAL_GPIO_EXTI_Callback	16	static
 ../Core/Src/main.c:1141:6:Error_Handler	4	static,ignoring_inline_asm

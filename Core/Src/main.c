@@ -39,7 +39,7 @@
 	/*Sensor Selection*/
 //Select which sensors to measure
 	//RES_ONLY, CAP_ONLY, RES_CAP, NONE
-#define Measure_Select RES_CAP
+#define Measure_Select RES_ONLY
 
 	/*CAN Defines*/
 //CAN_ID: CAN Bus Identifier in hexadecimal
@@ -272,7 +272,7 @@ int main(void)
   	  /*Peripheral initialization*/
   P_Charger_Init();
   CAN_Transceiver_Init();
-  MX_BlueNRG_2_Init(TxPower);
+  //MX_BlueNRG_2_Init(TxPower);
 
   //Test and Startup of PCAP04 ICs
   #if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
