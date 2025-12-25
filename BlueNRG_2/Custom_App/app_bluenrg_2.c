@@ -105,6 +105,7 @@ void MX_BlueNRG_2_Init(uint8_t TxPower)
   PRINT_DBG("\033[H");  /* serial console cursor to home */
   PRINT_DBG("BlueNRG-2 ResCap_BLESensor-App Application\r\n");
 
+
   /* Init Sensor Device */
   ret = Sensor_DeviceInit(TxPower);
   if (ret != BLE_STATUS_SUCCESS)
@@ -166,6 +167,7 @@ uint8_t Sensor_DeviceInit(uint8_t TxPower)
    */
   HAL_Delay(2000);
 
+
   /* get the BlueNRG HW and FW versions */
   getBlueNRGVersion(&hwVersion, &fwVersion);
 
@@ -182,6 +184,7 @@ uint8_t Sensor_DeviceInit(uint8_t TxPower)
     PRINT_DBG("Static Random address not well formed.\r\n");
     while(1);
   }
+
 
   ret = aci_hal_write_config_data(CONFIG_DATA_PUBADDR_OFFSET,
                                   bdaddr_len_out,

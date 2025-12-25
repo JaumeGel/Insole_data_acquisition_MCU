@@ -7542,7 +7542,7 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .isr_vector    0x08000000      0x238 ./Core/Startup/startup_stm32u575rgtx.o
                 0x08000000                g_pfnVectors
 
-.text           0x08000238     0xebcc
+.text           0x08000238     0xebe8
  *(.text)
  .text          0x08000238       0x40 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
  *(.text*)
@@ -7616,1197 +7616,1197 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .text.HCI_TL_SPI_Disable_IRQ
                 0x080013c6        0xe ./BlueNRG_2/Target/hci_tl_interface.o
  .text.HCI_TL_SPI_Init
-                0x080013d4       0xa0 ./BlueNRG_2/Target/hci_tl_interface.o
+                0x080013d4       0xbc ./BlueNRG_2/Target/hci_tl_interface.o
                 0x080013d4                HCI_TL_SPI_Init
  .text.HCI_TL_SPI_DeInit
-                0x08001474       0x2c ./BlueNRG_2/Target/hci_tl_interface.o
-                0x08001474                HCI_TL_SPI_DeInit
+                0x08001490       0x2c ./BlueNRG_2/Target/hci_tl_interface.o
+                0x08001490                HCI_TL_SPI_DeInit
  .text.HCI_TL_SPI_Reset
-                0x080014a0       0x3c ./BlueNRG_2/Target/hci_tl_interface.o
-                0x080014a0                HCI_TL_SPI_Reset
+                0x080014bc       0x3c ./BlueNRG_2/Target/hci_tl_interface.o
+                0x080014bc                HCI_TL_SPI_Reset
  .text.HCI_TL_SPI_Receive
-                0x080014dc       0xdc ./BlueNRG_2/Target/hci_tl_interface.o
-                0x080014dc                HCI_TL_SPI_Receive
+                0x080014f8       0xdc ./BlueNRG_2/Target/hci_tl_interface.o
+                0x080014f8                HCI_TL_SPI_Receive
  .text.HCI_TL_SPI_Send
-                0x080015b8      0x110 ./BlueNRG_2/Target/hci_tl_interface.o
-                0x080015b8                HCI_TL_SPI_Send
+                0x080015d4      0x110 ./BlueNRG_2/Target/hci_tl_interface.o
+                0x080015d4                HCI_TL_SPI_Send
  .text.IsDataAvailable
-                0x080016c8       0x20 ./BlueNRG_2/Target/hci_tl_interface.o
+                0x080016e4       0x20 ./BlueNRG_2/Target/hci_tl_interface.o
  .text.hci_tl_lowlevel_init
-                0x080016e8       0x74 ./BlueNRG_2/Target/hci_tl_interface.o
-                0x080016e8                hci_tl_lowlevel_init
+                0x08001704       0x74 ./BlueNRG_2/Target/hci_tl_interface.o
+                0x08001704                hci_tl_lowlevel_init
  .text.hci_tl_lowlevel_isr
-                0x0800175c       0x22 ./BlueNRG_2/Target/hci_tl_interface.o
-                0x0800175c                hci_tl_lowlevel_isr
- *fill*         0x0800177e        0x2 
+                0x08001778       0x22 ./BlueNRG_2/Target/hci_tl_interface.o
+                0x08001778                hci_tl_lowlevel_isr
+ *fill*         0x0800179a        0x2 
  .text.BSP_SPI1_Init
-                0x08001780       0x60 ./Core/Src/custom_bus.o
-                0x08001780                BSP_SPI1_Init
+                0x0800179c       0x60 ./Core/Src/custom_bus.o
+                0x0800179c                BSP_SPI1_Init
  .text.BSP_SPI1_SendRecv
-                0x080017e0       0x40 ./Core/Src/custom_bus.o
-                0x080017e0                BSP_SPI1_SendRecv
+                0x080017fc       0x40 ./Core/Src/custom_bus.o
+                0x080017fc                BSP_SPI1_SendRecv
  .text.BSP_GetTick
-                0x08001820        0xe ./Core/Src/custom_bus.o
-                0x08001820                BSP_GetTick
- *fill*         0x0800182e        0x2 
+                0x0800183c        0xe ./Core/Src/custom_bus.o
+                0x0800183c                BSP_GetTick
+ *fill*         0x0800184a        0x2 
  .text.MX_SPI1_Init
-                0x08001830       0xe8 ./Core/Src/custom_bus.o
-                0x08001830                MX_SPI1_Init
+                0x0800184c       0xe8 ./Core/Src/custom_bus.o
+                0x0800184c                MX_SPI1_Init
  .text.SPI1_MspInit
-                0x08001918      0x110 ./Core/Src/custom_bus.o
- .text.main     0x08001a28      0x1e4 ./Core/Src/main.o
-                0x08001a28                main
+                0x08001934      0x110 ./Core/Src/custom_bus.o
+ .text.main     0x08001a44      0x1e4 ./Core/Src/main.o
+                0x08001a44                main
  .text.SystemClock_Config
-                0x08001c0c       0xc4 ./Core/Src/main.o
-                0x08001c0c                SystemClock_Config
+                0x08001c28       0xc4 ./Core/Src/main.o
+                0x08001c28                SystemClock_Config
  .text.MX_ADC1_Init
-                0x08001cd0      0x2b0 ./Core/Src/main.o
+                0x08001cec      0x2b0 ./Core/Src/main.o
  .text.MX_DAC1_Init
-                0x08001f80       0xb4 ./Core/Src/main.o
+                0x08001f9c       0xb4 ./Core/Src/main.o
  .text.MX_FDCAN1_Init
-                0x08002034       0x8c ./Core/Src/main.o
+                0x08002050       0x8c ./Core/Src/main.o
  .text.MX_GPDMA1_Init
-                0x080020c0       0x40 ./Core/Src/main.o
+                0x080020dc       0x40 ./Core/Src/main.o
  .text.MX_ICACHE_Init
-                0x08002100       0x16 ./Core/Src/main.o
- *fill*         0x08002116        0x2 
+                0x0800211c       0x16 ./Core/Src/main.o
+ *fill*         0x08002132        0x2 
  .text.MX_SPI2_Init
-                0x08002118       0xe0 ./Core/Src/main.o
+                0x08002134       0xe0 ./Core/Src/main.o
  .text.MX_GPIO_Init
-                0x080021f8      0x290 ./Core/Src/main.o
+                0x08002214      0x290 ./Core/Src/main.o
  .text.P_Charger_Init
-                0x08002488       0x40 ./Core/Src/main.o
+                0x080024a4       0x40 ./Core/Src/main.o
  .text.CAN_Transceiver_Init
-                0x080024c8       0x18 ./Core/Src/main.o
+                0x080024e4       0x18 ./Core/Src/main.o
  .text.PCAP_Init
-                0x080024e0      0x124 ./Core/Src/main.o
+                0x080024fc      0x124 ./Core/Src/main.o
  .text.HAL_ADC_ConvCpltCallback
-                0x08002604       0x28 ./Core/Src/main.o
-                0x08002604                HAL_ADC_ConvCpltCallback
+                0x08002620       0x28 ./Core/Src/main.o
+                0x08002620                HAL_ADC_ConvCpltCallback
  .text.Error_Handler
-                0x0800262c        0xc ./Core/Src/main.o
-                0x0800262c                Error_Handler
+                0x08002648        0xc ./Core/Src/main.o
+                0x08002648                Error_Handler
  .text.HAL_MspInit
-                0x08002638       0x34 ./Core/Src/stm32u5xx_hal_msp.o
-                0x08002638                HAL_MspInit
+                0x08002654       0x34 ./Core/Src/stm32u5xx_hal_msp.o
+                0x08002654                HAL_MspInit
  .text.HAL_ADC_MspInit
-                0x0800266c      0x1e4 ./Core/Src/stm32u5xx_hal_msp.o
-                0x0800266c                HAL_ADC_MspInit
+                0x08002688      0x1e4 ./Core/Src/stm32u5xx_hal_msp.o
+                0x08002688                HAL_ADC_MspInit
  .text.HAL_DAC_MspInit
-                0x08002850       0xd0 ./Core/Src/stm32u5xx_hal_msp.o
-                0x08002850                HAL_DAC_MspInit
+                0x0800286c       0xd0 ./Core/Src/stm32u5xx_hal_msp.o
+                0x0800286c                HAL_DAC_MspInit
  .text.HAL_FDCAN_MspInit
-                0x08002920       0xf4 ./Core/Src/stm32u5xx_hal_msp.o
-                0x08002920                HAL_FDCAN_MspInit
+                0x0800293c       0xf4 ./Core/Src/stm32u5xx_hal_msp.o
+                0x0800293c                HAL_FDCAN_MspInit
  .text.HAL_SPI_MspInit
-                0x08002a14       0xe4 ./Core/Src/stm32u5xx_hal_msp.o
-                0x08002a14                HAL_SPI_MspInit
+                0x08002a30       0xe4 ./Core/Src/stm32u5xx_hal_msp.o
+                0x08002a30                HAL_SPI_MspInit
  .text.NMI_Handler
-                0x08002af8        0x8 ./Core/Src/stm32u5xx_it.o
-                0x08002af8                NMI_Handler
+                0x08002b14        0x8 ./Core/Src/stm32u5xx_it.o
+                0x08002b14                NMI_Handler
  .text.HardFault_Handler
-                0x08002b00        0x8 ./Core/Src/stm32u5xx_it.o
-                0x08002b00                HardFault_Handler
+                0x08002b1c        0x8 ./Core/Src/stm32u5xx_it.o
+                0x08002b1c                HardFault_Handler
  .text.MemManage_Handler
-                0x08002b08        0x8 ./Core/Src/stm32u5xx_it.o
-                0x08002b08                MemManage_Handler
+                0x08002b24        0x8 ./Core/Src/stm32u5xx_it.o
+                0x08002b24                MemManage_Handler
  .text.BusFault_Handler
-                0x08002b10        0x8 ./Core/Src/stm32u5xx_it.o
-                0x08002b10                BusFault_Handler
+                0x08002b2c        0x8 ./Core/Src/stm32u5xx_it.o
+                0x08002b2c                BusFault_Handler
  .text.UsageFault_Handler
-                0x08002b18        0x8 ./Core/Src/stm32u5xx_it.o
-                0x08002b18                UsageFault_Handler
+                0x08002b34        0x8 ./Core/Src/stm32u5xx_it.o
+                0x08002b34                UsageFault_Handler
  .text.SVC_Handler
-                0x08002b20        0xe ./Core/Src/stm32u5xx_it.o
-                0x08002b20                SVC_Handler
- .text.DebugMon_Handler
-                0x08002b2e        0xe ./Core/Src/stm32u5xx_it.o
-                0x08002b2e                DebugMon_Handler
- .text.PendSV_Handler
                 0x08002b3c        0xe ./Core/Src/stm32u5xx_it.o
-                0x08002b3c                PendSV_Handler
+                0x08002b3c                SVC_Handler
+ .text.DebugMon_Handler
+                0x08002b4a        0xe ./Core/Src/stm32u5xx_it.o
+                0x08002b4a                DebugMon_Handler
+ .text.PendSV_Handler
+                0x08002b58        0xe ./Core/Src/stm32u5xx_it.o
+                0x08002b58                PendSV_Handler
  .text.SysTick_Handler
-                0x08002b4a        0xc ./Core/Src/stm32u5xx_it.o
-                0x08002b4a                SysTick_Handler
- *fill*         0x08002b56        0x2 
+                0x08002b66        0xc ./Core/Src/stm32u5xx_it.o
+                0x08002b66                SysTick_Handler
+ *fill*         0x08002b72        0x2 
  .text.EXTI6_IRQHandler
-                0x08002b58       0x14 ./Core/Src/stm32u5xx_it.o
-                0x08002b58                EXTI6_IRQHandler
+                0x08002b74       0x14 ./Core/Src/stm32u5xx_it.o
+                0x08002b74                EXTI6_IRQHandler
  .text.EXTI8_IRQHandler
-                0x08002b6c       0x10 ./Core/Src/stm32u5xx_it.o
-                0x08002b6c                EXTI8_IRQHandler
+                0x08002b88       0x10 ./Core/Src/stm32u5xx_it.o
+                0x08002b88                EXTI8_IRQHandler
  .text.EXTI9_IRQHandler
-                0x08002b7c       0x10 ./Core/Src/stm32u5xx_it.o
-                0x08002b7c                EXTI9_IRQHandler
+                0x08002b98       0x10 ./Core/Src/stm32u5xx_it.o
+                0x08002b98                EXTI9_IRQHandler
  .text.EXTI10_IRQHandler
-                0x08002b8c       0x10 ./Core/Src/stm32u5xx_it.o
-                0x08002b8c                EXTI10_IRQHandler
+                0x08002ba8       0x10 ./Core/Src/stm32u5xx_it.o
+                0x08002ba8                EXTI10_IRQHandler
  .text.GPDMA1_Channel0_IRQHandler
-                0x08002b9c       0x14 ./Core/Src/stm32u5xx_it.o
-                0x08002b9c                GPDMA1_Channel0_IRQHandler
+                0x08002bb8       0x14 ./Core/Src/stm32u5xx_it.o
+                0x08002bb8                GPDMA1_Channel0_IRQHandler
  .text.ADC1_IRQHandler
-                0x08002bb0       0x14 ./Core/Src/stm32u5xx_it.o
-                0x08002bb0                ADC1_IRQHandler
+                0x08002bcc       0x14 ./Core/Src/stm32u5xx_it.o
+                0x08002bcc                ADC1_IRQHandler
  .text.FDCAN1_IT0_IRQHandler
-                0x08002bc4       0x14 ./Core/Src/stm32u5xx_it.o
-                0x08002bc4                FDCAN1_IT0_IRQHandler
+                0x08002be0       0x14 ./Core/Src/stm32u5xx_it.o
+                0x08002be0                FDCAN1_IT0_IRQHandler
  .text.FDCAN1_IT1_IRQHandler
-                0x08002bd8       0x14 ./Core/Src/stm32u5xx_it.o
-                0x08002bd8                FDCAN1_IT1_IRQHandler
+                0x08002bf4       0x14 ./Core/Src/stm32u5xx_it.o
+                0x08002bf4                FDCAN1_IT1_IRQHandler
  .text.SPI1_IRQHandler
-                0x08002bec       0x14 ./Core/Src/stm32u5xx_it.o
-                0x08002bec                SPI1_IRQHandler
+                0x08002c08       0x14 ./Core/Src/stm32u5xx_it.o
+                0x08002c08                SPI1_IRQHandler
  .text.SPI2_IRQHandler
-                0x08002c00       0x14 ./Core/Src/stm32u5xx_it.o
-                0x08002c00                SPI2_IRQHandler
+                0x08002c1c       0x14 ./Core/Src/stm32u5xx_it.o
+                0x08002c1c                SPI2_IRQHandler
  .text.SystemInit
-                0x08002c14       0x70 ./Core/Src/system_stm32u5xx.o
-                0x08002c14                SystemInit
+                0x08002c30       0x70 ./Core/Src/system_stm32u5xx.o
+                0x08002c30                SystemInit
  .text.Reset_Handler
-                0x08002c84       0x50 ./Core/Startup/startup_stm32u575rgtx.o
-                0x08002c84                Reset_Handler
+                0x08002ca0       0x50 ./Core/Startup/startup_stm32u575rgtx.o
+                0x08002ca0                Reset_Handler
  .text.Default_Handler
-                0x08002cd4        0x2 ./Core/Startup/startup_stm32u575rgtx.o
-                0x08002cd4                EXTI2_IRQHandler
-                0x08002cd4                TIM8_TRG_COM_IRQHandler
-                0x08002cd4                TIM8_CC_IRQHandler
-                0x08002cd4                EXTI5_IRQHandler
-                0x08002cd4                FLASH_S_IRQHandler
-                0x08002cd4                EXTI13_IRQHandler
-                0x08002cd4                TIM1_CC_IRQHandler
-                0x08002cd4                TSC_IRQHandler
-                0x08002cd4                TAMP_IRQHandler
-                0x08002cd4                TIM6_IRQHandler
-                0x08002cd4                EXTI12_IRQHandler
-                0x08002cd4                CORDIC_IRQHandler
-                0x08002cd4                EXTI3_IRQHandler
-                0x08002cd4                LPTIM4_IRQHandler
-                0x08002cd4                GPDMA1_Channel5_IRQHandler
-                0x08002cd4                LPTIM2_IRQHandler
-                0x08002cd4                I2C3_ER_IRQHandler
-                0x08002cd4                PWR_S3WU_IRQHandler
-                0x08002cd4                MDF1_FLT2_IRQHandler
-                0x08002cd4                LPDMA1_Channel3_IRQHandler
-                0x08002cd4                LPTIM3_IRQHandler
-                0x08002cd4                EXTI0_IRQHandler
-                0x08002cd4                I2C2_EV_IRQHandler
-                0x08002cd4                FPU_IRQHandler
-                0x08002cd4                GPDMA1_Channel3_IRQHandler
-                0x08002cd4                GPDMA1_Channel7_IRQHandler
-                0x08002cd4                MDF1_FLT4_IRQHandler
-                0x08002cd4                RAMCFG_IRQHandler
-                0x08002cd4                GPDMA1_Channel9_IRQHandler
-                0x08002cd4                DCACHE1_IRQHandler
-                0x08002cd4                OCTOSPI1_IRQHandler
-                0x08002cd4                GPDMA1_Channel2_IRQHandler
-                0x08002cd4                TIM8_UP_IRQHandler
-                0x08002cd4                RCC_S_IRQHandler
-                0x08002cd4                OCTOSPI2_IRQHandler
-                0x08002cd4                SAI2_IRQHandler
-                0x08002cd4                MDF1_FLT1_IRQHandler
-                0x08002cd4                MDF1_FLT5_IRQHandler
-                0x08002cd4                EXTI15_IRQHandler
-                0x08002cd4                TIM17_IRQHandler
-                0x08002cd4                USART3_IRQHandler
-                0x08002cd4                RTC_IRQHandler
-                0x08002cd4                UART5_IRQHandler
-                0x08002cd4                TIM4_IRQHandler
-                0x08002cd4                I2C1_EV_IRQHandler
-                0x08002cd4                GPDMA1_Channel12_IRQHandler
-                0x08002cd4                GPDMA1_Channel1_IRQHandler
-                0x08002cd4                TIM16_IRQHandler
-                0x08002cd4                GPDMA1_Channel15_IRQHandler
-                0x08002cd4                UART4_IRQHandler
-                0x08002cd4                SecureFault_Handler
-                0x08002cd4                TIM3_IRQHandler
-                0x08002cd4                RCC_IRQHandler
-                0x08002cd4                TIM1_TRG_COM_IRQHandler
-                0x08002cd4                Default_Handler
-                0x08002cd4                GPDMA1_Channel8_IRQHandler
-                0x08002cd4                FMAC_IRQHandler
-                0x08002cd4                GPDMA1_Channel11_IRQHandler
-                0x08002cd4                TIM7_IRQHandler
-                0x08002cd4                SDMMC1_IRQHandler
-                0x08002cd4                TIM5_IRQHandler
-                0x08002cd4                UCPD1_IRQHandler
-                0x08002cd4                TIM15_IRQHandler
-                0x08002cd4                I2C3_EV_IRQHandler
-                0x08002cd4                LPDMA1_Channel0_IRQHandler
-                0x08002cd4                PVD_PVM_IRQHandler
-                0x08002cd4                LPDMA1_Channel1_IRQHandler
-                0x08002cd4                EXTI14_IRQHandler
-                0x08002cd4                EXTI11_IRQHandler
-                0x08002cd4                CRS_IRQHandler
-                0x08002cd4                GPDMA1_Channel14_IRQHandler
-                0x08002cd4                LSECSSD_IRQHandler
-                0x08002cd4                EXTI4_IRQHandler
-                0x08002cd4                RTC_S_IRQHandler
-                0x08002cd4                GPDMA1_Channel13_IRQHandler
-                0x08002cd4                RNG_IRQHandler
-                0x08002cd4                COMP_IRQHandler
-                0x08002cd4                TIM1_UP_IRQHandler
-                0x08002cd4                ADC4_IRQHandler
-                0x08002cd4                WWDG_IRQHandler
-                0x08002cd4                I2C4_EV_IRQHandler
-                0x08002cd4                ADF1_IRQHandler
-                0x08002cd4                IWDG_IRQHandler
-                0x08002cd4                LPUART1_IRQHandler
-                0x08002cd4                MDF1_FLT0_IRQHandler
-                0x08002cd4                TIM2_IRQHandler
-                0x08002cd4                GPDMA1_Channel4_IRQHandler
-                0x08002cd4                EXTI7_IRQHandler
-                0x08002cd4                DMA2D_IRQHandler
-                0x08002cd4                TIM1_BRK_IRQHandler
-                0x08002cd4                EXTI1_IRQHandler
-                0x08002cd4                SDMMC2_IRQHandler
-                0x08002cd4                DAC1_IRQHandler
-                0x08002cd4                GTZC_IRQHandler
-                0x08002cd4                MDF1_FLT3_IRQHandler
-                0x08002cd4                USART2_IRQHandler
-                0x08002cd4                GPDMA1_Channel6_IRQHandler
-                0x08002cd4                I2C2_ER_IRQHandler
-                0x08002cd4                TIM8_BRK_IRQHandler
-                0x08002cd4                FLASH_IRQHandler
-                0x08002cd4                USART1_IRQHandler
-                0x08002cd4                OTG_FS_IRQHandler
-                0x08002cd4                SPI3_IRQHandler
-                0x08002cd4                LPDMA1_Channel2_IRQHandler
-                0x08002cd4                I2C1_ER_IRQHandler
-                0x08002cd4                FMC_IRQHandler
-                0x08002cd4                LPTIM1_IRQHandler
-                0x08002cd4                DCMI_PSSI_IRQHandler
-                0x08002cd4                I2C4_ER_IRQHandler
-                0x08002cd4                GPDMA1_Channel10_IRQHandler
-                0x08002cd4                ICACHE_IRQHandler
-                0x08002cd4                SAI1_IRQHandler
-                0x08002cd4                HASH_IRQHandler
- *fill*         0x08002cd6        0x2 
+                0x08002cf0        0x2 ./Core/Startup/startup_stm32u575rgtx.o
+                0x08002cf0                EXTI2_IRQHandler
+                0x08002cf0                TIM8_TRG_COM_IRQHandler
+                0x08002cf0                TIM8_CC_IRQHandler
+                0x08002cf0                EXTI5_IRQHandler
+                0x08002cf0                FLASH_S_IRQHandler
+                0x08002cf0                EXTI13_IRQHandler
+                0x08002cf0                TIM1_CC_IRQHandler
+                0x08002cf0                TSC_IRQHandler
+                0x08002cf0                TAMP_IRQHandler
+                0x08002cf0                TIM6_IRQHandler
+                0x08002cf0                EXTI12_IRQHandler
+                0x08002cf0                CORDIC_IRQHandler
+                0x08002cf0                EXTI3_IRQHandler
+                0x08002cf0                LPTIM4_IRQHandler
+                0x08002cf0                GPDMA1_Channel5_IRQHandler
+                0x08002cf0                LPTIM2_IRQHandler
+                0x08002cf0                I2C3_ER_IRQHandler
+                0x08002cf0                PWR_S3WU_IRQHandler
+                0x08002cf0                MDF1_FLT2_IRQHandler
+                0x08002cf0                LPDMA1_Channel3_IRQHandler
+                0x08002cf0                LPTIM3_IRQHandler
+                0x08002cf0                EXTI0_IRQHandler
+                0x08002cf0                I2C2_EV_IRQHandler
+                0x08002cf0                FPU_IRQHandler
+                0x08002cf0                GPDMA1_Channel3_IRQHandler
+                0x08002cf0                GPDMA1_Channel7_IRQHandler
+                0x08002cf0                MDF1_FLT4_IRQHandler
+                0x08002cf0                RAMCFG_IRQHandler
+                0x08002cf0                GPDMA1_Channel9_IRQHandler
+                0x08002cf0                DCACHE1_IRQHandler
+                0x08002cf0                OCTOSPI1_IRQHandler
+                0x08002cf0                GPDMA1_Channel2_IRQHandler
+                0x08002cf0                TIM8_UP_IRQHandler
+                0x08002cf0                RCC_S_IRQHandler
+                0x08002cf0                OCTOSPI2_IRQHandler
+                0x08002cf0                SAI2_IRQHandler
+                0x08002cf0                MDF1_FLT1_IRQHandler
+                0x08002cf0                MDF1_FLT5_IRQHandler
+                0x08002cf0                EXTI15_IRQHandler
+                0x08002cf0                TIM17_IRQHandler
+                0x08002cf0                USART3_IRQHandler
+                0x08002cf0                RTC_IRQHandler
+                0x08002cf0                UART5_IRQHandler
+                0x08002cf0                TIM4_IRQHandler
+                0x08002cf0                I2C1_EV_IRQHandler
+                0x08002cf0                GPDMA1_Channel12_IRQHandler
+                0x08002cf0                GPDMA1_Channel1_IRQHandler
+                0x08002cf0                TIM16_IRQHandler
+                0x08002cf0                GPDMA1_Channel15_IRQHandler
+                0x08002cf0                UART4_IRQHandler
+                0x08002cf0                SecureFault_Handler
+                0x08002cf0                TIM3_IRQHandler
+                0x08002cf0                RCC_IRQHandler
+                0x08002cf0                TIM1_TRG_COM_IRQHandler
+                0x08002cf0                Default_Handler
+                0x08002cf0                GPDMA1_Channel8_IRQHandler
+                0x08002cf0                FMAC_IRQHandler
+                0x08002cf0                GPDMA1_Channel11_IRQHandler
+                0x08002cf0                TIM7_IRQHandler
+                0x08002cf0                SDMMC1_IRQHandler
+                0x08002cf0                TIM5_IRQHandler
+                0x08002cf0                UCPD1_IRQHandler
+                0x08002cf0                TIM15_IRQHandler
+                0x08002cf0                I2C3_EV_IRQHandler
+                0x08002cf0                LPDMA1_Channel0_IRQHandler
+                0x08002cf0                PVD_PVM_IRQHandler
+                0x08002cf0                LPDMA1_Channel1_IRQHandler
+                0x08002cf0                EXTI14_IRQHandler
+                0x08002cf0                EXTI11_IRQHandler
+                0x08002cf0                CRS_IRQHandler
+                0x08002cf0                GPDMA1_Channel14_IRQHandler
+                0x08002cf0                LSECSSD_IRQHandler
+                0x08002cf0                EXTI4_IRQHandler
+                0x08002cf0                RTC_S_IRQHandler
+                0x08002cf0                GPDMA1_Channel13_IRQHandler
+                0x08002cf0                RNG_IRQHandler
+                0x08002cf0                COMP_IRQHandler
+                0x08002cf0                TIM1_UP_IRQHandler
+                0x08002cf0                ADC4_IRQHandler
+                0x08002cf0                WWDG_IRQHandler
+                0x08002cf0                I2C4_EV_IRQHandler
+                0x08002cf0                ADF1_IRQHandler
+                0x08002cf0                IWDG_IRQHandler
+                0x08002cf0                LPUART1_IRQHandler
+                0x08002cf0                MDF1_FLT0_IRQHandler
+                0x08002cf0                TIM2_IRQHandler
+                0x08002cf0                GPDMA1_Channel4_IRQHandler
+                0x08002cf0                EXTI7_IRQHandler
+                0x08002cf0                DMA2D_IRQHandler
+                0x08002cf0                TIM1_BRK_IRQHandler
+                0x08002cf0                EXTI1_IRQHandler
+                0x08002cf0                SDMMC2_IRQHandler
+                0x08002cf0                DAC1_IRQHandler
+                0x08002cf0                GTZC_IRQHandler
+                0x08002cf0                MDF1_FLT3_IRQHandler
+                0x08002cf0                USART2_IRQHandler
+                0x08002cf0                GPDMA1_Channel6_IRQHandler
+                0x08002cf0                I2C2_ER_IRQHandler
+                0x08002cf0                TIM8_BRK_IRQHandler
+                0x08002cf0                FLASH_IRQHandler
+                0x08002cf0                USART1_IRQHandler
+                0x08002cf0                OTG_FS_IRQHandler
+                0x08002cf0                SPI3_IRQHandler
+                0x08002cf0                LPDMA1_Channel2_IRQHandler
+                0x08002cf0                I2C1_ER_IRQHandler
+                0x08002cf0                FMC_IRQHandler
+                0x08002cf0                LPTIM1_IRQHandler
+                0x08002cf0                DCMI_PSSI_IRQHandler
+                0x08002cf0                I2C4_ER_IRQHandler
+                0x08002cf0                GPDMA1_Channel10_IRQHandler
+                0x08002cf0                ICACHE_IRQHandler
+                0x08002cf0                SAI1_IRQHandler
+                0x08002cf0                HASH_IRQHandler
+ *fill*         0x08002cf2        0x2 
  .text.HAL_Init
-                0x08002cd8       0x60 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
-                0x08002cd8                HAL_Init
+                0x08002cf4       0x60 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+                0x08002cf4                HAL_Init
  .text.HAL_InitTick
-                0x08002d38       0xec ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
-                0x08002d38                HAL_InitTick
+                0x08002d54       0xec ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+                0x08002d54                HAL_InitTick
  .text.HAL_IncTick
-                0x08002e24       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
-                0x08002e24                HAL_IncTick
+                0x08002e40       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+                0x08002e40                HAL_IncTick
  .text.HAL_GetTick
-                0x08002e4c       0x18 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
-                0x08002e4c                HAL_GetTick
+                0x08002e68       0x18 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+                0x08002e68                HAL_GetTick
  .text.HAL_Delay
-                0x08002e64       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
-                0x08002e64                HAL_Delay
+                0x08002e80       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+                0x08002e80                HAL_Delay
  .text.HAL_GetREVID
-                0x08002eac       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
-                0x08002eac                HAL_GetREVID
+                0x08002ec8       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+                0x08002ec8                HAL_GetREVID
  .text.LL_ADC_SetCommonClock
-                0x08002ec8       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08002ee4       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetCommonPathInternalCh
-                0x08002eee       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08002f0a       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_GetCommonPathInternalCh
-                0x08002f14       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08002f30       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetResolution
-                0x08002f30       0x40 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08002f4c       0x40 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetOffset
-                0x08002f70       0x42 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08002f8c       0x42 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_GetOffsetChannel
-                0x08002fb2       0x58 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08002fce       0x58 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetOffsetSign
-                0x0800300a       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003026       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetOffsetSignedSaturation
-                0x08003040       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800305c       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetOffsetUnsignedSaturation
-                0x08003076       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003092       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetGainCompensation
-                0x080030ac       0x46 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080030c8       0x46 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetSamplingTimeCommonChannels
-                0x080030f2       0x3e ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800310e       0x3e ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_REG_IsTriggerSourceSWStart
-                0x08003130       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
- *fill*         0x08003156        0x2 
+                0x0800314c       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+ *fill*         0x08003172        0x2 
  .text.LL_ADC_REG_SetSequencerRanks
-                0x08003158       0xc0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003174       0xc0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_REG_SetSequencerChAdd
-                0x08003218       0x66 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003234       0x66 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_REG_SetSequencerChRem
-                0x0800327e       0x30 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800329a       0x30 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_REG_GetDMATransfer
-                0x080032ae       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080032ca       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_INJ_IsTriggerSourceSWStart
-                0x080032ca       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080032e6       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetChannelSamplingTime
-                0x080032f0       0xc8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800330c       0xc8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_SetChannelSingleDiff
-                0x080033b8       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080033d4       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_DisableDeepPowerDown
-                0x08003400       0x24 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800341c       0x24 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_IsDeepPowerDownEnabled
-                0x08003424       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003440       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_EnableInternalRegulator
-                0x0800344c       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003468       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_IsInternalRegulatorEnabled
-                0x08003474       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003490       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_Enable
-                0x0800349c       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080034b8       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_Disable
-                0x080034c4       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080034e0       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_IsEnabled
-                0x080034ec       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003508       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_IsDisableOngoing
-                0x08003512       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800352e       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_REG_StartConversion
-                0x08003538       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003554       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_REG_IsConversionOngoing
-                0x08003560       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800357c       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.LL_ADC_INJ_IsConversionOngoing
-                0x08003586       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080035a2       0x26 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
  .text.HAL_ADC_Init
-                0x080035ac      0x594 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x080035ac                HAL_ADC_Init
+                0x080035c8      0x594 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080035c8                HAL_ADC_Init
  .text.HAL_ADC_Start_DMA
-                0x08003b40      0x214 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x08003b40                HAL_ADC_Start_DMA
+                0x08003b5c      0x214 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003b5c                HAL_ADC_Start_DMA
  .text.HAL_ADC_IRQHandler
-                0x08003d54      0x464 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x08003d54                HAL_ADC_IRQHandler
+                0x08003d70      0x464 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08003d70                HAL_ADC_IRQHandler
  .text.HAL_ADC_ConvHalfCpltCallback
-                0x080041b8       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x080041b8                HAL_ADC_ConvHalfCpltCallback
+                0x080041d4       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080041d4                HAL_ADC_ConvHalfCpltCallback
  .text.HAL_ADC_LevelOutOfWindowCallback
-                0x080041cc       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x080041cc                HAL_ADC_LevelOutOfWindowCallback
+                0x080041e8       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080041e8                HAL_ADC_LevelOutOfWindowCallback
  .text.HAL_ADC_ErrorCallback
-                0x080041e0       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x080041e0                HAL_ADC_ErrorCallback
+                0x080041fc       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080041fc                HAL_ADC_ErrorCallback
  .text.HAL_ADC_CalibrationCpltCallback
-                0x080041f4       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x080041f4                HAL_ADC_CalibrationCpltCallback
+                0x08004210       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08004210                HAL_ADC_CalibrationCpltCallback
  .text.HAL_ADC_VoltageRegulatorCallback
-                0x08004208       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x08004208                HAL_ADC_VoltageRegulatorCallback
+                0x08004224       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08004224                HAL_ADC_VoltageRegulatorCallback
  .text.HAL_ADC_ADCReadyCallback
-                0x0800421c       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x0800421c                HAL_ADC_ADCReadyCallback
+                0x08004238       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08004238                HAL_ADC_ADCReadyCallback
  .text.HAL_ADC_ConfigChannel
-                0x08004230      0xdb0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x08004230                HAL_ADC_ConfigChannel
+                0x0800424c      0xdb0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800424c                HAL_ADC_ConfigChannel
  .text.ADC_Enable
-                0x08004fe0       0xe0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x08004fe0                ADC_Enable
+                0x08004ffc       0xe0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08004ffc                ADC_Enable
  .text.ADC_Disable
-                0x080050c0       0xbe ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x080050c0                ADC_Disable
+                0x080050dc       0xbe ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x080050dc                ADC_Disable
  .text.ADC_DMAConvCplt
-                0x0800517e       0xd8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x0800517e                ADC_DMAConvCplt
+                0x0800519a       0xd8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800519a                ADC_DMAConvCplt
  .text.ADC_DMAHalfConvCplt
-                0x08005256       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x08005256                ADC_DMAHalfConvCplt
+                0x08005272       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x08005272                ADC_DMAHalfConvCplt
  .text.ADC_DMAError
-                0x08005272       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
-                0x08005272                ADC_DMAError
- *fill*         0x080052a6        0x2 
+                0x0800528e       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+                0x0800528e                ADC_DMAError
+ *fill*         0x080052c2        0x2 
  .text.LL_ADC_StartCalibration
-                0x080052a8       0x54 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+                0x080052c4       0x54 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
  .text.LL_ADC_IsCalibrationOnGoing
-                0x080052fc       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+                0x08005318       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
  .text.HAL_ADCEx_Calibration_Start
-                0x08005324      0x2ac ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
-                0x08005324                HAL_ADCEx_Calibration_Start
+                0x08005340      0x2ac ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+                0x08005340                HAL_ADCEx_Calibration_Start
  .text.HAL_ADCEx_InjectedConvCpltCallback
-                0x080055d0       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
-                0x080055d0                HAL_ADCEx_InjectedConvCpltCallback
+                0x080055ec       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+                0x080055ec                HAL_ADCEx_InjectedConvCpltCallback
  .text.HAL_ADCEx_LevelOutOfWindow2Callback
-                0x080055e4       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
-                0x080055e4                HAL_ADCEx_LevelOutOfWindow2Callback
+                0x08005600       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+                0x08005600                HAL_ADCEx_LevelOutOfWindow2Callback
  .text.HAL_ADCEx_LevelOutOfWindow3Callback
-                0x080055f8       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
-                0x080055f8                HAL_ADCEx_LevelOutOfWindow3Callback
+                0x08005614       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+                0x08005614                HAL_ADCEx_LevelOutOfWindow3Callback
  .text.HAL_ADCEx_EndOfSamplingCallback
-                0x0800560c       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
-                0x0800560c                HAL_ADCEx_EndOfSamplingCallback
+                0x08005628       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+                0x08005628                HAL_ADCEx_EndOfSamplingCallback
  .text.__NVIC_SetPriorityGrouping
-                0x08005620       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x0800563c       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
  .text.__NVIC_GetPriorityGrouping
-                0x08005668       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x08005684       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
  .text.__NVIC_EnableIRQ
-                0x08005684       0x3c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x080056a0       0x3c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
  .text.__NVIC_DisableIRQ
-                0x080056c0       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x080056dc       0x48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
  .text.__NVIC_SetPriority
-                0x08005708       0x54 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x08005724       0x54 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
  .text.NVIC_EncodePriority
-                0x0800575c       0x66 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x08005778       0x66 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
  .text.HAL_NVIC_SetPriorityGrouping
-                0x080057c2       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
-                0x080057c2                HAL_NVIC_SetPriorityGrouping
+                0x080057de       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x080057de                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x080057d8       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
-                0x080057d8                HAL_NVIC_SetPriority
+                0x080057f4       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x080057f4                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x0800580c       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
-                0x0800580c                HAL_NVIC_EnableIRQ
- .text.HAL_NVIC_DisableIRQ
                 0x08005828       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
-                0x08005828                HAL_NVIC_DisableIRQ
+                0x08005828                HAL_NVIC_EnableIRQ
+ .text.HAL_NVIC_DisableIRQ
+                0x08005844       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x08005844                HAL_NVIC_DisableIRQ
  .text.HAL_SYSTICK_Config
-                0x08005844       0x44 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
-                0x08005844                HAL_SYSTICK_Config
+                0x08005860       0x44 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x08005860                HAL_SYSTICK_Config
  .text.HAL_SYSTICK_CLKSourceConfig
-                0x08005888       0xb0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
-                0x08005888                HAL_SYSTICK_CLKSourceConfig
+                0x080058a4       0xb0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x080058a4                HAL_SYSTICK_CLKSourceConfig
  .text.HAL_SYSTICK_GetCLKSourceConfig
-                0x08005938       0x74 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
-                0x08005938                HAL_SYSTICK_GetCLKSourceConfig
+                0x08005954       0x74 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+                0x08005954                HAL_SYSTICK_GetCLKSourceConfig
  .text.HAL_DAC_Init
-                0x080059ac       0x44 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
-                0x080059ac                HAL_DAC_Init
+                0x080059c8       0x44 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
+                0x080059c8                HAL_DAC_Init
  .text.HAL_DAC_Start
-                0x080059f0       0xd8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
-                0x080059f0                HAL_DAC_Start
+                0x08005a0c       0xd8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
+                0x08005a0c                HAL_DAC_Start
  .text.HAL_DAC_SetValue
-                0x08005ac8       0x5a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
-                0x08005ac8                HAL_DAC_SetValue
- *fill*         0x08005b22        0x2 
+                0x08005ae4       0x5a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
+                0x08005ae4                HAL_DAC_SetValue
+ *fill*         0x08005b3e        0x2 
  .text.HAL_DAC_ConfigChannel
-                0x08005b24      0x340 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
-                0x08005b24                HAL_DAC_ConfigChannel
+                0x08005b40      0x340 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
+                0x08005b40                HAL_DAC_ConfigChannel
  .text.HAL_DACEx_SetConfigAutonomousMode
-                0x08005e64       0x70 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
-                0x08005e64                HAL_DACEx_SetConfigAutonomousMode
+                0x08005e80       0x70 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
+                0x08005e80                HAL_DACEx_SetConfigAutonomousMode
  .text.HAL_DMA_Init
-                0x08005ed4      0x284 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
-                0x08005ed4                HAL_DMA_Init
+                0x08005ef0      0x284 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+                0x08005ef0                HAL_DMA_Init
  .text.HAL_DMA_Start_IT
-                0x08006158       0xc0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
-                0x08006158                HAL_DMA_Start_IT
+                0x08006174       0xc0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+                0x08006174                HAL_DMA_Start_IT
  .text.HAL_DMA_Abort_IT
-                0x08006218       0x52 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
-                0x08006218                HAL_DMA_Abort_IT
+                0x08006234       0x52 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+                0x08006234                HAL_DMA_Abort_IT
  .text.HAL_DMA_IRQHandler
-                0x0800626a      0x2c2 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
-                0x0800626a                HAL_DMA_IRQHandler
+                0x08006286      0x2c2 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+                0x08006286                HAL_DMA_IRQHandler
  .text.HAL_DMA_ConfigChannelAttributes
-                0x0800652c       0x78 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
-                0x0800652c                HAL_DMA_ConfigChannelAttributes
+                0x08006548       0x78 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+                0x08006548                HAL_DMA_ConfigChannelAttributes
  .text.DMA_SetConfig
-                0x080065a4       0x4a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
- *fill*         0x080065ee        0x2 
+                0x080065c0       0x4a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+ *fill*         0x0800660a        0x2 
  .text.DMA_Init
-                0x080065f0      0x500 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+                0x0800660c      0x500 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
  .text.HAL_DMAEx_List_Start_IT
-                0x08006af0      0x128 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
-                0x08006af0                HAL_DMAEx_List_Start_IT
+                0x08006b0c      0x128 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
+                0x08006b0c                HAL_DMAEx_List_Start_IT
  .text.HAL_DMAEx_List_GetNodeConfig
-                0x08006c18       0x2c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
-                0x08006c18                HAL_DMAEx_List_GetNodeConfig
+                0x08006c34       0x2c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
+                0x08006c34                HAL_DMAEx_List_GetNodeConfig
  .text.DMA_List_GetNodeConfig
-                0x08006c44      0x214 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
+                0x08006c60      0x214 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
  .text.DMA_List_GetCLLRNodeInfo
-                0x08006e58       0x60 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
+                0x08006e74       0x60 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
  .text.HAL_EXTI_RegisterCallback
-                0x08006eb8       0x58 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
-                0x08006eb8                HAL_EXTI_RegisterCallback
+                0x08006ed4       0x58 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
+                0x08006ed4                HAL_EXTI_RegisterCallback
  .text.HAL_EXTI_GetHandle
-                0x08006f10       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
-                0x08006f10                HAL_EXTI_GetHandle
+                0x08006f2c       0x28 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
+                0x08006f2c                HAL_EXTI_GetHandle
  .text.HAL_EXTI_IRQHandler
-                0x08006f38       0x90 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
-                0x08006f38                HAL_EXTI_IRQHandler
+                0x08006f54       0x90 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
+                0x08006f54                HAL_EXTI_IRQHandler
  .text.HAL_FDCAN_Init
-                0x08006fc8      0x2a4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x08006fc8                HAL_FDCAN_Init
+                0x08006fe4      0x2a4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08006fe4                HAL_FDCAN_Init
  .text.HAL_FDCAN_IRQHandler
-                0x0800726c      0x266 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x0800726c                HAL_FDCAN_IRQHandler
+                0x08007288      0x266 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08007288                HAL_FDCAN_IRQHandler
  .text.HAL_FDCAN_TxEventFifoCallback
-                0x080074d2       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x080074d2                HAL_FDCAN_TxEventFifoCallback
+                0x080074ee       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x080074ee                HAL_FDCAN_TxEventFifoCallback
  .text.HAL_FDCAN_RxFifo0Callback
-                0x080074e8       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x080074e8                HAL_FDCAN_RxFifo0Callback
+                0x08007504       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08007504                HAL_FDCAN_RxFifo0Callback
  .text.HAL_FDCAN_RxFifo1Callback
-                0x080074fe       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x080074fe                HAL_FDCAN_RxFifo1Callback
+                0x0800751a       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x0800751a                HAL_FDCAN_RxFifo1Callback
  .text.HAL_FDCAN_TxFifoEmptyCallback
-                0x08007514       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x08007514                HAL_FDCAN_TxFifoEmptyCallback
+                0x08007530       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08007530                HAL_FDCAN_TxFifoEmptyCallback
  .text.HAL_FDCAN_TxBufferCompleteCallback
-                0x08007528       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x08007528                HAL_FDCAN_TxBufferCompleteCallback
+                0x08007544       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08007544                HAL_FDCAN_TxBufferCompleteCallback
  .text.HAL_FDCAN_TxBufferAbortCallback
-                0x0800753e       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x0800753e                HAL_FDCAN_TxBufferAbortCallback
+                0x0800755a       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x0800755a                HAL_FDCAN_TxBufferAbortCallback
  .text.HAL_FDCAN_TimestampWraparoundCallback
-                0x08007554       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x08007554                HAL_FDCAN_TimestampWraparoundCallback
+                0x08007570       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08007570                HAL_FDCAN_TimestampWraparoundCallback
  .text.HAL_FDCAN_TimeoutOccurredCallback
-                0x08007568       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x08007568                HAL_FDCAN_TimeoutOccurredCallback
+                0x08007584       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08007584                HAL_FDCAN_TimeoutOccurredCallback
  .text.HAL_FDCAN_HighPriorityMessageCallback
-                0x0800757c       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x0800757c                HAL_FDCAN_HighPriorityMessageCallback
+                0x08007598       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x08007598                HAL_FDCAN_HighPriorityMessageCallback
  .text.HAL_FDCAN_ErrorCallback
-                0x08007590       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x08007590                HAL_FDCAN_ErrorCallback
+                0x080075ac       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x080075ac                HAL_FDCAN_ErrorCallback
  .text.HAL_FDCAN_ErrorStatusCallback
-                0x080075a4       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
-                0x080075a4                HAL_FDCAN_ErrorStatusCallback
- *fill*         0x080075ba        0x2 
+                0x080075c0       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x080075c0                HAL_FDCAN_ErrorStatusCallback
+ *fill*         0x080075d6        0x2 
  .text.FDCAN_CalcultateRamBlockAddresses
-                0x080075bc       0xac ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+                0x080075d8       0xac ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
  .text.HAL_GPIO_Init
-                0x08007668      0x3c0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007668                HAL_GPIO_Init
+                0x08007684      0x3c0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007684                HAL_GPIO_Init
  .text.HAL_GPIO_DeInit
-                0x08007a28      0x1bc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007a28                HAL_GPIO_DeInit
+                0x08007a44      0x1bc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007a44                HAL_GPIO_DeInit
  .text.HAL_GPIO_ReadPin
-                0x08007be4       0x30 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007be4                HAL_GPIO_ReadPin
+                0x08007c00       0x30 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007c00                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x08007c14       0x30 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007c14                HAL_GPIO_WritePin
+                0x08007c30       0x30 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007c30                HAL_GPIO_WritePin
  .text.HAL_GPIO_TogglePin
-                0x08007c44       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007c44                HAL_GPIO_TogglePin
+                0x08007c60       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007c60                HAL_GPIO_TogglePin
  .text.HAL_GPIO_EXTI_IRQHandler
-                0x08007c78       0x4c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007c78                HAL_GPIO_EXTI_IRQHandler
+                0x08007c94       0x4c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007c94                HAL_GPIO_EXTI_IRQHandler
  .text.HAL_GPIO_EXTI_Rising_Callback
-                0x08007cc4       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007cc4                HAL_GPIO_EXTI_Rising_Callback
+                0x08007ce0       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007ce0                HAL_GPIO_EXTI_Rising_Callback
  .text.HAL_GPIO_EXTI_Falling_Callback
-                0x08007cda       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
-                0x08007cda                HAL_GPIO_EXTI_Falling_Callback
+                0x08007cf6       0x16 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x08007cf6                HAL_GPIO_EXTI_Falling_Callback
  .text.HAL_ICACHE_Enable
-                0x08007cf0       0x20 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
-                0x08007cf0                HAL_ICACHE_Enable
+                0x08007d0c       0x20 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
+                0x08007d0c                HAL_ICACHE_Enable
  .text.HAL_PWREx_ControlVoltageScaling
-                0x08007d10       0xfc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
-                0x08007d10                HAL_PWREx_ControlVoltageScaling
+                0x08007d2c       0xfc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
+                0x08007d2c                HAL_PWREx_ControlVoltageScaling
  .text.HAL_PWREx_GetVoltageRange
-                0x08007e0c       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
-                0x08007e0c                HAL_PWREx_GetVoltageRange
+                0x08007e28       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
+                0x08007e28                HAL_PWREx_GetVoltageRange
  .text.HAL_PWREx_EnableVddA
-                0x08007e28       0x20 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
-                0x08007e28                HAL_PWREx_EnableVddA
+                0x08007e44       0x20 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
+                0x08007e44                HAL_PWREx_EnableVddA
  .text.HAL_RCC_OscConfig
-                0x08007e48      0xdb8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
-                0x08007e48                HAL_RCC_OscConfig
+                0x08007e64      0xdb8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+                0x08007e64                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x08008c00      0x3e4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
-                0x08008c00                HAL_RCC_ClockConfig
+                0x08008c1c      0x3e4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+                0x08008c1c                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x08008fe4      0x20c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
-                0x08008fe4                HAL_RCC_GetSysClockFreq
+                0x08009000      0x20c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+                0x08009000                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_GetHCLKFreq
-                0x080091f0       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
-                0x080091f0                HAL_RCC_GetHCLKFreq
+                0x0800920c       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+                0x0800920c                HAL_RCC_GetHCLKFreq
  .text.RCC_SetFlashLatencyFromMSIRange
-                0x08009224      0x10c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+                0x08009240      0x10c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x08009330      0xb48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
-                0x08009330                HAL_RCCEx_PeriphCLKConfig
+                0x0800934c      0xb48 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
+                0x0800934c                HAL_RCCEx_PeriphCLKConfig
  .text.RCCEx_PLL2_Config
-                0x08009e78      0x130 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
+                0x08009e94      0x130 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
  .text.RCCEx_PLL3_Config
-                0x08009fa8      0x130 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
+                0x08009fc4      0x130 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
  .text.HAL_SPI_Init
-                0x0800a0d8      0x22c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800a0d8                HAL_SPI_Init
+                0x0800a0f4      0x22c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800a0f4                HAL_SPI_Init
  .text.HAL_SPI_Transmit
-                0x0800a304      0x428 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800a304                HAL_SPI_Transmit
+                0x0800a320      0x428 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800a320                HAL_SPI_Transmit
  .text.HAL_SPI_Receive
-                0x0800a72c      0x5c4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800a72c                HAL_SPI_Receive
+                0x0800a748      0x5c4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800a748                HAL_SPI_Receive
  .text.HAL_SPI_TransmitReceive
-                0x0800acf0      0x6c0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800acf0                HAL_SPI_TransmitReceive
+                0x0800ad0c      0x6c0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800ad0c                HAL_SPI_TransmitReceive
  .text.HAL_SPI_IRQHandler
-                0x0800b3b0      0x3a8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800b3b0                HAL_SPI_IRQHandler
+                0x0800b3cc      0x3a8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b3cc                HAL_SPI_IRQHandler
  .text.HAL_SPI_TxCpltCallback
-                0x0800b758       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800b758                HAL_SPI_TxCpltCallback
+                0x0800b774       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b774                HAL_SPI_TxCpltCallback
  .text.HAL_SPI_RxCpltCallback
-                0x0800b76c       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800b76c                HAL_SPI_RxCpltCallback
+                0x0800b788       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b788                HAL_SPI_RxCpltCallback
  .text.HAL_SPI_TxRxCpltCallback
-                0x0800b780       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800b780                HAL_SPI_TxRxCpltCallback
+                0x0800b79c       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b79c                HAL_SPI_TxRxCpltCallback
  .text.HAL_SPI_ErrorCallback
-                0x0800b794       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800b794                HAL_SPI_ErrorCallback
+                0x0800b7b0       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b7b0                HAL_SPI_ErrorCallback
  .text.HAL_SPI_SuspendCallback
-                0x0800b7a8       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800b7a8                HAL_SPI_SuspendCallback
+                0x0800b7c4       0x14 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b7c4                HAL_SPI_SuspendCallback
  .text.HAL_SPI_GetState
-                0x0800b7bc       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
-                0x0800b7bc                HAL_SPI_GetState
+                0x0800b7d8       0x1c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b7d8                HAL_SPI_GetState
  .text.SPI_DMAAbortOnError
-                0x0800b7d8       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b7f4       0x34 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
  .text.SPI_CloseTransfer
-                0x0800b80c      0x140 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b828      0x140 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
  .text.SPI_WaitOnFlagUntilTimeout
-                0x0800b94c       0x5c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b968       0x5c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
  .text.SPI_GetPacketSize
-                0x0800b9a8       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+                0x0800b9c4       0x36 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
  .text.HAL_SPIEx_SetConfigAutonomousMode
-                0x0800b9de       0x82 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
-                0x0800b9de                HAL_SPIEx_SetConfigAutonomousMode
+                0x0800b9fa       0x82 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
+                0x0800b9fa                HAL_SPIEx_SetConfigAutonomousMode
  .text.hci_disconnection_complete_event_process
-                0x0800ba60       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800ba60                hci_disconnection_complete_event_process
+                0x0800ba7c       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800ba7c                hci_disconnection_complete_event_process
  .text.hci_encryption_change_event_process
-                0x0800ba90       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800ba90                hci_encryption_change_event_process
+                0x0800baac       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800baac                hci_encryption_change_event_process
  .text.hci_read_remote_version_information_complete_event_process
-                0x0800bac0       0x3e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bac0                hci_read_remote_version_information_complete_event_process
+                0x0800badc       0x3e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800badc                hci_read_remote_version_information_complete_event_process
  .text.hci_hardware_error_event_process
-                0x0800bafe       0x24 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bafe                hci_hardware_error_event_process
+                0x0800bb1a       0x24 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bb1a                hci_hardware_error_event_process
  .text.hci_number_of_completed_packets_event_process
-                0x0800bb22       0xae ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bb22                hci_number_of_completed_packets_event_process
+                0x0800bb3e       0xae ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bb3e                hci_number_of_completed_packets_event_process
  .text.hci_data_buffer_overflow_event_process
-                0x0800bbd0       0x24 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bbd0                hci_data_buffer_overflow_event_process
+                0x0800bbec       0x24 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bbec                hci_data_buffer_overflow_event_process
  .text.hci_encryption_key_refresh_complete_event_process
-                0x0800bbf4       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bbf4                hci_encryption_key_refresh_complete_event_process
+                0x0800bc10       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bc10                hci_encryption_key_refresh_complete_event_process
  .text.aci_blue_initialized_event_process
-                0x0800bc22       0x24 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bc22                aci_blue_initialized_event_process
+                0x0800bc3e       0x24 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bc3e                aci_blue_initialized_event_process
  .text.aci_blue_events_lost_event_process
-                0x0800bc46       0x22 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bc46                aci_blue_events_lost_event_process
+                0x0800bc62       0x22 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bc62                aci_blue_events_lost_event_process
  .text.aci_blue_crash_info_event_process
-                0x0800bc68       0x84 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bc68                aci_blue_crash_info_event_process
+                0x0800bc84       0x84 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bc84                aci_blue_crash_info_event_process
  .text.aci_hal_end_of_radio_activity_event_process
-                0x0800bcec       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bcec                aci_hal_end_of_radio_activity_event_process
+                0x0800bd08       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bd08                aci_hal_end_of_radio_activity_event_process
  .text.aci_hal_scan_req_report_event_process
-                0x0800bd1a       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bd1a                aci_hal_scan_req_report_event_process
+                0x0800bd36       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bd36                aci_hal_scan_req_report_event_process
  .text.aci_hal_fw_error_event_process
-                0x0800bd48       0x2c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bd48                aci_hal_fw_error_event_process
+                0x0800bd64       0x2c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bd64                aci_hal_fw_error_event_process
  .text.aci_gap_limited_discoverable_event_process
-                0x0800bd74       0x1a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bd74                aci_gap_limited_discoverable_event_process
+                0x0800bd90       0x1a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bd90                aci_gap_limited_discoverable_event_process
  .text.aci_gap_pairing_complete_event_process
-                0x0800bd8e       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bd8e                aci_gap_pairing_complete_event_process
+                0x0800bdaa       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bdaa                aci_gap_pairing_complete_event_process
  .text.aci_gap_pass_key_req_event_process
-                0x0800bdbc       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bdbc                aci_gap_pass_key_req_event_process
+                0x0800bdd8       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bdd8                aci_gap_pass_key_req_event_process
  .text.aci_gap_authorization_req_event_process
-                0x0800bde2       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bde2                aci_gap_authorization_req_event_process
+                0x0800bdfe       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bdfe                aci_gap_authorization_req_event_process
  .text.aci_gap_slave_security_initiated_event_process
-                0x0800be08       0x1a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800be08                aci_gap_slave_security_initiated_event_process
+                0x0800be24       0x1a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800be24                aci_gap_slave_security_initiated_event_process
  .text.aci_gap_bond_lost_event_process
-                0x0800be22       0x1a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800be22                aci_gap_bond_lost_event_process
+                0x0800be3e       0x1a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800be3e                aci_gap_bond_lost_event_process
  .text.aci_gap_proc_complete_event_process
-                0x0800be3c       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800be3c                aci_gap_proc_complete_event_process
+                0x0800be58       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800be58                aci_gap_proc_complete_event_process
  .text.aci_gap_addr_not_resolved_event_process
-                0x0800be6a       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800be6a                aci_gap_addr_not_resolved_event_process
+                0x0800be86       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800be86                aci_gap_addr_not_resolved_event_process
  .text.aci_gap_numeric_comparison_value_event_process
-                0x0800be90       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800be90                aci_gap_numeric_comparison_value_event_process
+                0x0800beac       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800beac                aci_gap_numeric_comparison_value_event_process
  .text.aci_gap_keypress_notification_event_process
-                0x0800bebe       0x2c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bebe                aci_gap_keypress_notification_event_process
+                0x0800beda       0x2c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800beda                aci_gap_keypress_notification_event_process
  .text.aci_l2cap_connection_update_resp_event_process
-                0x0800beea       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800beea                aci_l2cap_connection_update_resp_event_process
+                0x0800bf06       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bf06                aci_l2cap_connection_update_resp_event_process
  .text.aci_l2cap_proc_timeout_event_process
-                0x0800bf18       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bf18                aci_l2cap_proc_timeout_event_process
+                0x0800bf34       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bf34                aci_l2cap_proc_timeout_event_process
  .text.aci_l2cap_connection_update_req_event_process
-                0x0800bf46       0x5c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bf46                aci_l2cap_connection_update_req_event_process
+                0x0800bf62       0x5c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bf62                aci_l2cap_connection_update_req_event_process
  .text.aci_l2cap_command_reject_event_process
-                0x0800bfa2       0x3c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bfa2                aci_l2cap_command_reject_event_process
+                0x0800bfbe       0x3c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bfbe                aci_l2cap_command_reject_event_process
  .text.aci_gatt_attribute_modified_event_process
-                0x0800bfde       0x3e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800bfde                aci_gatt_attribute_modified_event_process
+                0x0800bffa       0x3e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800bffa                aci_gatt_attribute_modified_event_process
  .text.aci_gatt_proc_timeout_event_process
-                0x0800c01c       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c01c                aci_gatt_proc_timeout_event_process
+                0x0800c038       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c038                aci_gatt_proc_timeout_event_process
  .text.aci_att_exchange_mtu_resp_event_process
-                0x0800c042       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c042                aci_att_exchange_mtu_resp_event_process
+                0x0800c05e       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c05e                aci_att_exchange_mtu_resp_event_process
  .text.aci_att_find_info_resp_event_process
-                0x0800c070       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c070                aci_att_find_info_resp_event_process
+                0x0800c08c       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c08c                aci_att_find_info_resp_event_process
  .text.aci_att_find_by_type_value_resp_event_process
-                0x0800c0a0       0xb4 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c0a0                aci_att_find_by_type_value_resp_event_process
+                0x0800c0bc       0xb4 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c0bc                aci_att_find_by_type_value_resp_event_process
  .text.aci_att_read_by_type_resp_event_process
-                0x0800c154       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c154                aci_att_read_by_type_resp_event_process
+                0x0800c170       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c170                aci_att_read_by_type_resp_event_process
  .text.aci_att_read_resp_event_process
-                0x0800c184       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c184                aci_att_read_resp_event_process
+                0x0800c1a0       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c1a0                aci_att_read_resp_event_process
  .text.aci_att_read_blob_resp_event_process
-                0x0800c1b2       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c1b2                aci_att_read_blob_resp_event_process
+                0x0800c1ce       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c1ce                aci_att_read_blob_resp_event_process
  .text.aci_att_read_multiple_resp_event_process
-                0x0800c1e0       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c1e0                aci_att_read_multiple_resp_event_process
+                0x0800c1fc       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c1fc                aci_att_read_multiple_resp_event_process
  .text.aci_att_read_by_group_type_resp_event_process
-                0x0800c20e       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c20e                aci_att_read_by_group_type_resp_event_process
+                0x0800c22a       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c22a                aci_att_read_by_group_type_resp_event_process
  .text.aci_att_prepare_write_resp_event_process
-                0x0800c23e       0x3c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c23e                aci_att_prepare_write_resp_event_process
+                0x0800c25a       0x3c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c25a                aci_att_prepare_write_resp_event_process
  .text.aci_att_exec_write_resp_event_process
-                0x0800c27a       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c27a                aci_att_exec_write_resp_event_process
+                0x0800c296       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c296                aci_att_exec_write_resp_event_process
  .text.aci_gatt_indication_event_process
-                0x0800c2a0       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c2a0                aci_gatt_indication_event_process
+                0x0800c2bc       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c2bc                aci_gatt_indication_event_process
  .text.aci_gatt_notification_event_process
-                0x0800c2d2       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c2d2                aci_gatt_notification_event_process
+                0x0800c2ee       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c2ee                aci_gatt_notification_event_process
  .text.aci_gatt_proc_complete_event_process
-                0x0800c304       0x2c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c304                aci_gatt_proc_complete_event_process
+                0x0800c320       0x2c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c320                aci_gatt_proc_complete_event_process
  .text.aci_gatt_error_resp_event_process
-                0x0800c330       0x34 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c330                aci_gatt_error_resp_event_process
+                0x0800c34c       0x34 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c34c                aci_gatt_error_resp_event_process
  .text.aci_gatt_disc_read_char_by_uuid_resp_event_process
-                0x0800c364       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c364                aci_gatt_disc_read_char_by_uuid_resp_event_process
+                0x0800c380       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c380                aci_gatt_disc_read_char_by_uuid_resp_event_process
  .text.aci_gatt_write_permit_req_event_process
-                0x0800c396       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c396                aci_gatt_write_permit_req_event_process
+                0x0800c3b2       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c3b2                aci_gatt_write_permit_req_event_process
  .text.aci_gatt_read_permit_req_event_process
-                0x0800c3c8       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c3c8                aci_gatt_read_permit_req_event_process
+                0x0800c3e4       0x32 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c3e4                aci_gatt_read_permit_req_event_process
  .text.aci_gatt_read_multi_permit_req_event_process
-                0x0800c3fa       0x8a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c3fa                aci_gatt_read_multi_permit_req_event_process
+                0x0800c416       0x8a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c416                aci_gatt_read_multi_permit_req_event_process
  .text.aci_gatt_tx_pool_available_event_process
-                0x0800c484       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c484                aci_gatt_tx_pool_available_event_process
+                0x0800c4a0       0x2e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c4a0                aci_gatt_tx_pool_available_event_process
  .text.aci_gatt_server_confirmation_event_process
-                0x0800c4b2       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c4b2                aci_gatt_server_confirmation_event_process
+                0x0800c4ce       0x26 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c4ce                aci_gatt_server_confirmation_event_process
  .text.aci_gatt_prepare_write_permit_req_event_process
-                0x0800c4d8       0x3c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c4d8                aci_gatt_prepare_write_permit_req_event_process
+                0x0800c4f4       0x3c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c4f4                aci_gatt_prepare_write_permit_req_event_process
  .text.hci_le_connection_complete_event_process
-                0x0800c514       0x68 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c514                hci_le_connection_complete_event_process
+                0x0800c530       0x68 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c530                hci_le_connection_complete_event_process
  .text.hci_le_advertising_report_event_process
-                0x0800c57c      0x1ba ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c57c                hci_le_advertising_report_event_process
+                0x0800c598      0x1ba ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c598                hci_le_advertising_report_event_process
  .text.hci_le_connection_update_complete_event_process
-                0x0800c736       0x46 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c736                hci_le_connection_update_complete_event_process
+                0x0800c752       0x46 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c752                hci_le_connection_update_complete_event_process
  .text.hci_le_read_remote_used_features_complete_event_process
-                0x0800c77c       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c77c                hci_le_read_remote_used_features_complete_event_process
+                0x0800c798       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c798                hci_le_read_remote_used_features_complete_event_process
  .text.hci_le_long_term_key_request_event_process
-                0x0800c7ac       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c7ac                hci_le_long_term_key_request_event_process
+                0x0800c7c8       0x30 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c7c8                hci_le_long_term_key_request_event_process
  .text.hci_le_data_length_change_event_process
-                0x0800c7dc       0x40 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c7dc                hci_le_data_length_change_event_process
+                0x0800c7f8       0x40 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c7f8                hci_le_data_length_change_event_process
  .text.hci_le_read_local_p256_public_key_complete_event_process
-                0x0800c81c       0x2a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c81c                hci_le_read_local_p256_public_key_complete_event_process
+                0x0800c838       0x2a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c838                hci_le_read_local_p256_public_key_complete_event_process
  .text.hci_le_generate_dhkey_complete_event_process
-                0x0800c846       0x2a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c846                hci_le_generate_dhkey_complete_event_process
+                0x0800c862       0x2a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c862                hci_le_generate_dhkey_complete_event_process
  .text.hci_le_enhanced_connection_complete_event_process
-                0x0800c870       0x7c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c870                hci_le_enhanced_connection_complete_event_process
+                0x0800c88c       0x7c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c88c                hci_le_enhanced_connection_complete_event_process
  .text.hci_le_direct_advertising_report_event_process
-                0x0800c8ec      0x15e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800c8ec                hci_le_direct_advertising_report_event_process
+                0x0800c908      0x15e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800c908                hci_le_direct_advertising_report_event_process
  .text.hci_encryption_change_event
-                0x0800ca4a       0x1e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ca4a                hci_encryption_change_event
+                0x0800ca66       0x1e ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ca66                hci_encryption_change_event
  .text.hci_read_remote_version_information_complete_event
-                0x0800ca68       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ca68                hci_read_remote_version_information_complete_event
+                0x0800ca84       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ca84                hci_read_remote_version_information_complete_event
  .text.hci_hardware_error_event
-                0x0800ca90       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ca90                hci_hardware_error_event
+                0x0800caac       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800caac                hci_hardware_error_event
  .text.hci_number_of_completed_packets_event
-                0x0800caa6       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800caa6                hci_number_of_completed_packets_event
+                0x0800cac2       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cac2                hci_number_of_completed_packets_event
  .text.hci_data_buffer_overflow_event
-                0x0800cabe       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cabe                hci_data_buffer_overflow_event
+                0x0800cada       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cada                hci_data_buffer_overflow_event
  .text.hci_encryption_key_refresh_complete_event
-                0x0800cad4       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cad4                hci_encryption_key_refresh_complete_event
+                0x0800caf0       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800caf0                hci_encryption_key_refresh_complete_event
  .text.hci_le_advertising_report_event
-                0x0800caf0       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800caf0                hci_le_advertising_report_event
+                0x0800cb0c       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cb0c                hci_le_advertising_report_event
  .text.hci_le_connection_update_complete_event
-                0x0800cb08       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cb08                hci_le_connection_update_complete_event
+                0x0800cb24       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cb24                hci_le_connection_update_complete_event
  .text.hci_le_read_remote_used_features_complete_event
-                0x0800cb30       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cb30                hci_le_read_remote_used_features_complete_event
- .text.hci_le_long_term_key_request_event
                 0x0800cb4c       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cb4c                hci_le_long_term_key_request_event
+                0x0800cb4c                hci_le_read_remote_used_features_complete_event
+ .text.hci_le_long_term_key_request_event
+                0x0800cb68       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cb68                hci_le_long_term_key_request_event
  .text.hci_le_data_length_change_event
-                0x0800cb68       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cb68                hci_le_data_length_change_event
+                0x0800cb84       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cb84                hci_le_data_length_change_event
  .text.hci_le_read_local_p256_public_key_complete_event
-                0x0800cb90       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cb90                hci_le_read_local_p256_public_key_complete_event
+                0x0800cbac       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cbac                hci_le_read_local_p256_public_key_complete_event
  .text.hci_le_generate_dhkey_complete_event
-                0x0800cba8       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cba8                hci_le_generate_dhkey_complete_event
+                0x0800cbc4       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cbc4                hci_le_generate_dhkey_complete_event
  .text.hci_le_enhanced_connection_complete_event
-                0x0800cbc0       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cbc0                hci_le_enhanced_connection_complete_event
+                0x0800cbdc       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cbdc                hci_le_enhanced_connection_complete_event
  .text.hci_le_direct_advertising_report_event
-                0x0800cbe8       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cbe8                hci_le_direct_advertising_report_event
+                0x0800cc04       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc04                hci_le_direct_advertising_report_event
  .text.aci_gap_limited_discoverable_event
-                0x0800cc00        0xe ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc00                aci_gap_limited_discoverable_event
+                0x0800cc1c        0xe ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc1c                aci_gap_limited_discoverable_event
  .text.aci_gap_authorization_req_event
-                0x0800cc0e       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc0e                aci_gap_authorization_req_event
+                0x0800cc2a       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc2a                aci_gap_authorization_req_event
  .text.aci_gap_slave_security_initiated_event
-                0x0800cc24        0xe ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc24                aci_gap_slave_security_initiated_event
+                0x0800cc40        0xe ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc40                aci_gap_slave_security_initiated_event
  .text.aci_gap_bond_lost_event
-                0x0800cc32        0xe ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc32                aci_gap_bond_lost_event
+                0x0800cc4e        0xe ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc4e                aci_gap_bond_lost_event
  .text.aci_gap_proc_complete_event
-                0x0800cc40       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc40                aci_gap_proc_complete_event
+                0x0800cc5c       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc5c                aci_gap_proc_complete_event
  .text.aci_gap_addr_not_resolved_event
-                0x0800cc60       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc60                aci_gap_addr_not_resolved_event
+                0x0800cc7c       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc7c                aci_gap_addr_not_resolved_event
  .text.aci_gap_numeric_comparison_value_event
-                0x0800cc76       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc76                aci_gap_numeric_comparison_value_event
+                0x0800cc92       0x18 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cc92                aci_gap_numeric_comparison_value_event
  .text.aci_gap_keypress_notification_event
-                0x0800cc8e       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cc8e                aci_gap_keypress_notification_event
+                0x0800ccaa       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ccaa                aci_gap_keypress_notification_event
  .text.aci_gatt_proc_timeout_event
-                0x0800ccaa       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ccaa                aci_gatt_proc_timeout_event
+                0x0800ccc6       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ccc6                aci_gatt_proc_timeout_event
  .text.aci_att_exchange_mtu_resp_event
-                0x0800ccc0       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ccc0                aci_att_exchange_mtu_resp_event
+                0x0800ccdc       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ccdc                aci_att_exchange_mtu_resp_event
  .text.aci_att_find_info_resp_event
-                0x0800ccdc       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ccdc                aci_att_find_info_resp_event
+                0x0800ccf8       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ccf8                aci_att_find_info_resp_event
  .text.aci_att_find_by_type_value_resp_event
-                0x0800ccfc       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ccfc                aci_att_find_by_type_value_resp_event
+                0x0800cd18       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cd18                aci_att_find_by_type_value_resp_event
  .text.aci_att_read_by_type_resp_event
-                0x0800cd18       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cd18                aci_att_read_by_type_resp_event
+                0x0800cd34       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cd34                aci_att_read_by_type_resp_event
  .text.aci_att_read_resp_event
-                0x0800cd38       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cd38                aci_att_read_resp_event
- .text.aci_att_read_blob_resp_event
                 0x0800cd54       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cd54                aci_att_read_blob_resp_event
- .text.aci_att_read_multiple_resp_event
+                0x0800cd54                aci_att_read_resp_event
+ .text.aci_att_read_blob_resp_event
                 0x0800cd70       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cd70                aci_att_read_multiple_resp_event
+                0x0800cd70                aci_att_read_blob_resp_event
+ .text.aci_att_read_multiple_resp_event
+                0x0800cd8c       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cd8c                aci_att_read_multiple_resp_event
  .text.aci_att_read_by_group_type_resp_event
-                0x0800cd8c       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cd8c                aci_att_read_by_group_type_resp_event
+                0x0800cda8       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cda8                aci_att_read_by_group_type_resp_event
  .text.aci_att_prepare_write_resp_event
-                0x0800cdac       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cdac                aci_att_prepare_write_resp_event
+                0x0800cdc8       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cdc8                aci_att_prepare_write_resp_event
  .text.aci_att_exec_write_resp_event
-                0x0800cdd4       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cdd4                aci_att_exec_write_resp_event
+                0x0800cdf0       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cdf0                aci_att_exec_write_resp_event
  .text.aci_gatt_indication_event
-                0x0800cdea       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cdea                aci_gatt_indication_event
+                0x0800ce06       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ce06                aci_gatt_indication_event
  .text.aci_gatt_notification_event
-                0x0800ce0a       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ce0a                aci_gatt_notification_event
+                0x0800ce26       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ce26                aci_gatt_notification_event
  .text.aci_gatt_proc_complete_event
-                0x0800ce2a       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ce2a                aci_gatt_proc_complete_event
+                0x0800ce46       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ce46                aci_gatt_proc_complete_event
  .text.aci_gatt_error_resp_event
-                0x0800ce46       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ce46                aci_gatt_error_resp_event
+                0x0800ce62       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ce62                aci_gatt_error_resp_event
  .text.aci_gatt_disc_read_char_by_uuid_resp_event
-                0x0800ce6e       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ce6e                aci_gatt_disc_read_char_by_uuid_resp_event
+                0x0800ce8a       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ce8a                aci_gatt_disc_read_char_by_uuid_resp_event
  .text.aci_gatt_write_permit_req_event
-                0x0800ce8e       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ce8e                aci_gatt_write_permit_req_event
+                0x0800ceaa       0x20 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800ceaa                aci_gatt_write_permit_req_event
  .text.aci_gatt_read_multi_permit_req_event
-                0x0800ceae       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ceae                aci_gatt_read_multi_permit_req_event
- .text.aci_gatt_tx_pool_available_event
                 0x0800ceca       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800ceca                aci_gatt_tx_pool_available_event
+                0x0800ceca                aci_gatt_read_multi_permit_req_event
+ .text.aci_gatt_tx_pool_available_event
+                0x0800cee6       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cee6                aci_gatt_tx_pool_available_event
  .text.aci_gatt_server_confirmation_event
-                0x0800cee6       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cee6                aci_gatt_server_confirmation_event
+                0x0800cf02       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cf02                aci_gatt_server_confirmation_event
  .text.aci_gatt_prepare_write_permit_req_event
-                0x0800cefc       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cefc                aci_gatt_prepare_write_permit_req_event
+                0x0800cf18       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cf18                aci_gatt_prepare_write_permit_req_event
  .text.aci_l2cap_connection_update_resp_event
-                0x0800cf24       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cf24                aci_l2cap_connection_update_resp_event
- .text.aci_l2cap_proc_timeout_event
                 0x0800cf40       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cf40                aci_l2cap_proc_timeout_event
+                0x0800cf40                aci_l2cap_connection_update_resp_event
+ .text.aci_l2cap_proc_timeout_event
+                0x0800cf5c       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cf5c                aci_l2cap_proc_timeout_event
  .text.aci_l2cap_connection_update_req_event
-                0x0800cf5c       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cf5c                aci_l2cap_connection_update_req_event
+                0x0800cf78       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cf78                aci_l2cap_connection_update_req_event
  .text.aci_l2cap_command_reject_event
-                0x0800cf84       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cf84                aci_l2cap_command_reject_event
+                0x0800cfa0       0x28 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cfa0                aci_l2cap_command_reject_event
  .text.aci_blue_initialized_event
-                0x0800cfac       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cfac                aci_blue_initialized_event
+                0x0800cfc8       0x16 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cfc8                aci_blue_initialized_event
  .text.aci_blue_events_lost_event
-                0x0800cfc2       0x14 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cfc2                aci_blue_events_lost_event
+                0x0800cfde       0x14 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800cfde                aci_blue_events_lost_event
  .text.aci_blue_crash_info_event
-                0x0800cfd6       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cfd6                aci_blue_crash_info_event
- .text.aci_hal_end_of_radio_activity_event
                 0x0800cff2       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800cff2                aci_hal_end_of_radio_activity_event
- .text.aci_hal_scan_req_report_event
+                0x0800cff2                aci_blue_crash_info_event
+ .text.aci_hal_end_of_radio_activity_event
                 0x0800d00e       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800d00e                aci_hal_scan_req_report_event
- .text.aci_hal_fw_error_event
+                0x0800d00e                aci_hal_end_of_radio_activity_event
+ .text.aci_hal_scan_req_report_event
                 0x0800d02a       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
-                0x0800d02a                aci_hal_fw_error_event
+                0x0800d02a                aci_hal_scan_req_report_event
+ .text.aci_hal_fw_error_event
+                0x0800d046       0x1c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+                0x0800d046                aci_hal_fw_error_event
  .text.hci_reset
-                0x0800d046       0x52 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
-                0x0800d046                hci_reset
+                0x0800d062       0x52 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
+                0x0800d062                hci_reset
  .text.hci_read_local_version_information
-                0x0800d098       0x8c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
-                0x0800d098                hci_read_local_version_information
+                0x0800d0b4       0x8c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
+                0x0800d0b4                hci_read_local_version_information
  .text.hci_le_set_scan_response_data
-                0x0800d124       0xf2 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
-                0x0800d124                hci_le_set_scan_response_data
+                0x0800d140       0xf2 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
+                0x0800d140                hci_le_set_scan_response_data
  .text.aci_gap_set_discoverable
-                0x0800d216      0x206 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800d216                aci_gap_set_discoverable
+                0x0800d232      0x206 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800d232                aci_gap_set_discoverable
  .text.aci_gap_set_io_capability
-                0x0800d41c       0xba ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800d41c                aci_gap_set_io_capability
+                0x0800d438       0xba ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800d438                aci_gap_set_io_capability
  .text.aci_gap_set_authentication_requirement
-                0x0800d4d6      0x19a ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800d4d6                aci_gap_set_authentication_requirement
+                0x0800d4f2      0x19a ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800d4f2                aci_gap_set_authentication_requirement
  .text.aci_gap_pass_key_resp
-                0x0800d670       0xe0 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800d670                aci_gap_pass_key_resp
+                0x0800d68c       0xe0 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800d68c                aci_gap_pass_key_resp
  .text.aci_gap_init
-                0x0800d750      0x15a ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800d750                aci_gap_init
+                0x0800d76c      0x15a ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800d76c                aci_gap_init
  .text.aci_gap_slave_security_req
-                0x0800d8aa       0xc0 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800d8aa                aci_gap_slave_security_req
+                0x0800d8c6       0xc0 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800d8c6                aci_gap_slave_security_req
  .text.aci_gap_update_adv_data
-                0x0800d96a       0xf6 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800d96a                aci_gap_update_adv_data
+                0x0800d986       0xf6 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800d986                aci_gap_update_adv_data
  .text.aci_gap_clear_security_db
-                0x0800da60       0x52 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
-                0x0800da60                aci_gap_clear_security_db
+                0x0800da7c       0x52 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+                0x0800da7c                aci_gap_clear_security_db
  .text.aci_gatt_init
-                0x0800dab2       0x54 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
-                0x0800dab2                aci_gatt_init
+                0x0800dace       0x54 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+                0x0800dace                aci_gatt_init
  .text.aci_gatt_add_service
-                0x0800db06      0x1ac ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
-                0x0800db06                aci_gatt_add_service
+                0x0800db22      0x1ac ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+                0x0800db22                aci_gatt_add_service
  .text.aci_gatt_add_char
-                0x0800dcb2      0x210 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
-                0x0800dcb2                aci_gatt_add_char
+                0x0800dcce      0x210 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+                0x0800dcce                aci_gatt_add_char
  .text.aci_gatt_update_char_value
-                0x0800dec2      0x164 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
-                0x0800dec2                aci_gatt_update_char_value
+                0x0800dede      0x164 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+                0x0800dede                aci_gatt_update_char_value
  .text.aci_gatt_allow_read
-                0x0800e026       0xbc ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
-                0x0800e026                aci_gatt_allow_read
+                0x0800e042       0xbc ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+                0x0800e042                aci_gatt_allow_read
  .text.aci_hal_write_config_data
-                0x0800e0e2      0x11c ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
-                0x0800e0e2                aci_hal_write_config_data
+                0x0800e0fe      0x11c ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
+                0x0800e0fe                aci_hal_write_config_data
  .text.aci_hal_read_config_data
-                0x0800e1fe      0x108 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
-                0x0800e1fe                aci_hal_read_config_data
+                0x0800e21a      0x108 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
+                0x0800e21a                aci_hal_read_config_data
  .text.aci_hal_set_tx_power_level
-                0x0800e306       0xe0 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
-                0x0800e306                aci_hal_set_tx_power_level
+                0x0800e322       0xe0 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
+                0x0800e322                aci_hal_set_tx_power_level
  .text.verify_packet
-                0x0800e3e6       0x40 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
- *fill*         0x0800e426        0x2 
+                0x0800e402       0x40 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+ *fill*         0x0800e442        0x2 
  .text.send_cmd
-                0x0800e428       0x84 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e444       0x84 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
  .text.move_list
-                0x0800e4ac       0x38 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e4c8       0x38 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
  .text.free_event_list
-                0x0800e4e4       0x3c ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e500       0x3c ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
  .text.hci_init
-                0x0800e520       0x84 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
-                0x0800e520                hci_init
+                0x0800e53c       0x84 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e53c                hci_init
  .text.hci_register_io_bus
-                0x0800e5a4       0x40 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
-                0x0800e5a4                hci_register_io_bus
+                0x0800e5c0       0x40 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e5c0                hci_register_io_bus
  .text.hci_send_req
-                0x0800e5e4      0x230 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
-                0x0800e5e4                hci_send_req
+                0x0800e600      0x230 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e600                hci_send_req
  .text.hci_user_evt_proc
-                0x0800e814       0x58 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
-                0x0800e814                hci_user_evt_proc
+                0x0800e830       0x58 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e830                hci_user_evt_proc
  .text.hci_notify_asynch_evt
-                0x0800e86c       0x9c ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
-                0x0800e86c                hci_notify_asynch_evt
+                0x0800e888       0x9c ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+                0x0800e888                hci_notify_asynch_evt
  .text.list_init_head
-                0x0800e908       0x20 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800e908                list_init_head
+                0x0800e924       0x20 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800e924                list_init_head
  .text.list_is_empty
-                0x0800e928       0x44 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800e928                list_is_empty
+                0x0800e944       0x44 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800e944                list_is_empty
  .text.list_insert_head
-                0x0800e96c       0x4c ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800e96c                list_insert_head
+                0x0800e988       0x4c ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800e988                list_insert_head
  .text.list_insert_tail
-                0x0800e9b8       0x4c ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800e9b8                list_insert_tail
+                0x0800e9d4       0x4c ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800e9d4                list_insert_tail
  .text.list_remove_node
-                0x0800ea04       0x42 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800ea04                list_remove_node
+                0x0800ea20       0x42 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800ea20                list_remove_node
  .text.list_remove_head
-                0x0800ea46       0x4e ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800ea46                list_remove_head
+                0x0800ea62       0x4e ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800ea62                list_remove_head
  .text.list_remove_tail
-                0x0800ea94       0x4e ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800ea94                list_remove_tail
+                0x0800eab0       0x4e ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800eab0                list_remove_tail
  .text.list_get_size
-                0x0800eae2       0x50 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
-                0x0800eae2                list_get_size
- *fill*         0x0800eb32        0x2 
- .text.Set_SSN  0x0800eb34       0x78 ./PCAP04/user_spi_interface.o
-                0x0800eb34                Set_SSN
+                0x0800eafe       0x50 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+                0x0800eafe                list_get_size
+ *fill*         0x0800eb4e        0x2 
+ .text.Set_SSN  0x0800eb50       0x78 ./PCAP04/user_spi_interface.o
+                0x0800eb50                Set_SSN
  .text.Write_Opcode
-                0x0800ebac       0x40 ./PCAP04/user_spi_interface.o
-                0x0800ebac                Write_Opcode
+                0x0800ebc8       0x40 ./PCAP04/user_spi_interface.o
+                0x0800ebc8                Write_Opcode
  .text.Write_Byte_Auto_Incr
-                0x0800ebec       0x9c ./PCAP04/user_spi_interface.o
-                0x0800ebec                Write_Byte_Auto_Incr
+                0x0800ec08       0x9c ./PCAP04/user_spi_interface.o
+                0x0800ec08                Write_Byte_Auto_Incr
  .text.Read_Byte_Auto_Incr
-                0x0800ec88       0x98 ./PCAP04/user_spi_interface.o
-                0x0800ec88                Read_Byte_Auto_Incr
+                0x0800eca4       0x98 ./PCAP04/user_spi_interface.o
+                0x0800eca4                Read_Byte_Auto_Incr
  .text.Read_Byte2
-                0x0800ed20       0x58 ./PCAP04/user_spi_interface.o
-                0x0800ed20                Read_Byte2
- .text.memset   0x0800ed78       0x10 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-memset.o)
-                0x0800ed78                memset
+                0x0800ed3c       0x58 ./PCAP04/user_spi_interface.o
+                0x0800ed3c                Read_Byte2
+ .text.memset   0x0800ed94       0x10 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-memset.o)
+                0x0800ed94                memset
  .text.__libc_init_array
-                0x0800ed88       0x48 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-init.o)
-                0x0800ed88                __libc_init_array
- .text.memcpy   0x0800edd0       0x1a C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
-                0x0800edd0                memcpy
+                0x0800eda4       0x48 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-init.o)
+                0x0800eda4                __libc_init_array
+ .text.memcpy   0x0800edec       0x1a C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libc_nano.a(libc_a-memcpy-stub.o)
+                0x0800edec                memcpy
  *(.glue_7)
- .glue_7        0x0800edea        0x0 linker stubs
+ .glue_7        0x0800ee06        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0800edea        0x0 linker stubs
+ .glue_7t       0x0800ee06        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x0800edea        0x2 
- .eh_frame      0x0800edec        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
+ *fill*         0x0800ee06        0x2 
+ .eh_frame      0x0800ee08        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
  *(.init)
- .init          0x0800edec        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crti.o
-                0x0800edec                _init
- .init          0x0800edf0        0x8 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtn.o
+ .init          0x0800ee08        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crti.o
+                0x0800ee08                _init
+ .init          0x0800ee0c        0x8 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtn.o
  *(.fini)
- .fini          0x0800edf8        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crti.o
-                0x0800edf8                _fini
- .fini          0x0800edfc        0x8 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtn.o
-                0x0800ee04                        _etext = .
+ .fini          0x0800ee14        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crti.o
+                0x0800ee14                _fini
+ .fini          0x0800ee18        0x8 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtn.o
+                0x0800ee20                        _etext = .
 
-.vfp11_veneer   0x0800ee04        0x0
- .vfp11_veneer  0x0800ee04        0x0 linker stubs
+.vfp11_veneer   0x0800ee20        0x0
+ .vfp11_veneer  0x0800ee20        0x0 linker stubs
 
-.v4_bx          0x0800ee04        0x0
- .v4_bx         0x0800ee04        0x0 linker stubs
+.v4_bx          0x0800ee20        0x0
+ .v4_bx         0x0800ee20        0x0 linker stubs
 
-.iplt           0x0800ee04        0x0
- .iplt          0x0800ee04        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
+.iplt           0x0800ee20        0x0
+ .iplt          0x0800ee20        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
 
-.rodata         0x0800ee04      0x2c0
+.rodata         0x0800ee20      0x2c0
  *(.rodata)
- .rodata        0x0800ee04        0x7 ./BlueNRG_2/Custom_App/app_bluenrg_2.o
- *fill*         0x0800ee0b        0x1 
- .rodata        0x0800ee0c        0x8 ./BlueNRG_2/Custom_App/sensor.o
+ .rodata        0x0800ee20        0x7 ./BlueNRG_2/Custom_App/app_bluenrg_2.o
+ *fill*         0x0800ee27        0x1 
+ .rodata        0x0800ee28        0x8 ./BlueNRG_2/Custom_App/sensor.o
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x0800ee14       0x10 ./Core/Src/system_stm32u5xx.o
-                0x0800ee14                AHBPrescTable
+                0x0800ee30       0x10 ./Core/Src/system_stm32u5xx.o
+                0x0800ee30                AHBPrescTable
  .rodata.MSIRangeTable
-                0x0800ee24       0x40 ./Core/Src/system_stm32u5xx.o
-                0x0800ee24                MSIRangeTable
+                0x0800ee40       0x40 ./Core/Src/system_stm32u5xx.o
+                0x0800ee40                MSIRangeTable
  .rodata.LPGPIO_Map
-                0x0800ee64       0x80 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+                0x0800ee80       0x80 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
  .rodata.hci_events_table
-                0x0800eee4       0x38 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800eee4                hci_events_table
+                0x0800ef00       0x38 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800ef00                hci_events_table
  .rodata.hci_le_meta_events_table
-                0x0800ef1c       0x50 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800ef1c                hci_le_meta_events_table
+                0x0800ef38       0x50 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800ef38                hci_le_meta_events_table
  .rodata.hci_vendor_specific_events_table
-                0x0800ef6c      0x158 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
-                0x0800ef6c                hci_vendor_specific_events_table
+                0x0800ef88      0x158 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+                0x0800ef88                hci_vendor_specific_events_table
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0800f0c4        0x0
-                0x0800f0c4                        __exidx_start = .
+.ARM            0x0800f0e0        0x0
+                0x0800f0e0                        __exidx_start = .
  *(.ARM.exidx*)
-                0x0800f0c4                        __exidx_end = .
+                0x0800f0e0                        __exidx_end = .
 
-.preinit_array  0x0800f0c4        0x0
-                0x0800f0c4                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0800f0e0        0x0
+                0x0800f0e0                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0800f0c4                        PROVIDE (__preinit_array_end = .)
+                0x0800f0e0                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0800f0c4        0x4
-                0x0800f0c4                        PROVIDE (__init_array_start = .)
+.init_array     0x0800f0e0        0x4
+                0x0800f0e0                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0800f0c4        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
-                0x0800f0c8                        PROVIDE (__init_array_end = .)
+ .init_array    0x0800f0e0        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x0800f0e4                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0800f0c8        0x4
+.fini_array     0x0800f0e4        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800f0c8        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
+ .fini_array    0x0800f0e4        0x4 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0800f0cc                        _sidata = LOADADDR (.data)
+                0x0800f0e8                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x0800f0cc        0x0
- .rel.iplt      0x0800f0cc        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
+.rel.dyn        0x0800f0e8        0x0
+ .rel.iplt      0x0800f0e8        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
 
-.data           0x20000000      0x365 load address 0x0800f0cc
+.data           0x20000000      0x365 load address 0x0800f0e8
                 0x20000000                        _sdata = .
  *(.data)
  *(.data*)
@@ -8836,10 +8836,10 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  *(.RamFunc*)
                 0x20000365                        _edata = .
 
-.igot.plt       0x20000368        0x0 load address 0x0800f431
+.igot.plt       0x20000368        0x0 load address 0x0800f44d
  .igot.plt      0x20000368        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
 
-.bss            0x20000368      0xab4 load address 0x0800f431
+.bss            0x20000368      0xab4 load address 0x0800f44d
                 0x20000368                        _sbss = .
                 0x20000368                        __bss_start__ = _sbss
  *(.bss)
@@ -8980,7 +8980,7 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x20000e1c                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000e1c      0x604 load address 0x0800f431
+                0x20000e1c      0x604 load address 0x0800f44d
                 0x20000e20                        . = ALIGN (0x8)
  *fill*         0x20000e1c        0x4 
                 [!provide]                        PROVIDE (end = .)
@@ -9089,81 +9089,81 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v8-m.main+fp/hard\libm.a
 LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x2ca2b
+.debug_info     0x00000000    0x2ca47
  .debug_info    0x00000000      0x836 ./BlueNRG_2/Custom_App/app_bluenrg_2.o
  .debug_info    0x00000836      0x647 ./BlueNRG_2/Custom_App/gatt_db.o
  .debug_info    0x00000e7d      0x52d ./BlueNRG_2/Custom_App/sensor.o
- .debug_info    0x000013aa      0xddc ./BlueNRG_2/Target/hci_tl_interface.o
- .debug_info    0x00002186     0x1816 ./Core/Src/custom_bus.o
- .debug_info    0x0000399c     0x2880 ./Core/Src/main.o
- .debug_info    0x0000621c     0x233e ./Core/Src/stm32u5xx_hal_msp.o
- .debug_info    0x0000855a     0x1490 ./Core/Src/stm32u5xx_it.o
- .debug_info    0x000099ea      0x929 ./Core/Src/system_stm32u5xx.o
- .debug_info    0x0000a313       0x30 ./Core/Startup/startup_stm32u575rgtx.o
- .debug_info    0x0000a343     0x11ec ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
- .debug_info    0x0000b52f     0x2679 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
- .debug_info    0x0000dba8     0x1d41 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
- .debug_info    0x0000f8e9     0x163a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
- .debug_info    0x00010f23      0xf5d ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
- .debug_info    0x00011e80      0xe50 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
- .debug_info    0x00012cd0      0xadc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
- .debug_info    0x000137ac     0x1905 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
- .debug_info    0x000150b1      0x736 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
- .debug_info    0x000157e7     0x1920 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
- .debug_info    0x00017107      0x859 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
- .debug_info    0x00017960      0x4d6 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
- .debug_info    0x00017e36      0xe3e ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
- .debug_info    0x00018c74     0x11f0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
- .debug_info    0x00019e64     0x157f ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
- .debug_info    0x0001b3e3     0x15c7 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
- .debug_info    0x0001c9aa      0xa97 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
- .debug_info    0x0001d441     0x2fb3 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
- .debug_info    0x000203f4     0x11b1 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
- .debug_info    0x000215a5     0x28a2 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
- .debug_info    0x00023e47     0x2d32 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
- .debug_info    0x00026b79     0x3138 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
- .debug_info    0x00029cb1     0x1111 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
- .debug_info    0x0002adc2      0x8be ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
- .debug_info    0x0002b680      0x6e4 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
- .debug_info    0x0002bd64      0xcc7 ./PCAP04/user_spi_interface.o
+ .debug_info    0x000013aa      0xdf8 ./BlueNRG_2/Target/hci_tl_interface.o
+ .debug_info    0x000021a2     0x1816 ./Core/Src/custom_bus.o
+ .debug_info    0x000039b8     0x2880 ./Core/Src/main.o
+ .debug_info    0x00006238     0x233e ./Core/Src/stm32u5xx_hal_msp.o
+ .debug_info    0x00008576     0x1490 ./Core/Src/stm32u5xx_it.o
+ .debug_info    0x00009a06      0x929 ./Core/Src/system_stm32u5xx.o
+ .debug_info    0x0000a32f       0x30 ./Core/Startup/startup_stm32u575rgtx.o
+ .debug_info    0x0000a35f     0x11ec ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+ .debug_info    0x0000b54b     0x2679 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+ .debug_info    0x0000dbc4     0x1d41 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+ .debug_info    0x0000f905     0x163a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+ .debug_info    0x00010f3f      0xf5d ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
+ .debug_info    0x00011e9c      0xe50 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
+ .debug_info    0x00012cec      0xadc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+ .debug_info    0x000137c8     0x1905 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
+ .debug_info    0x000150cd      0x736 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
+ .debug_info    0x00015803     0x1920 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+ .debug_info    0x00017123      0x859 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+ .debug_info    0x0001797c      0x4d6 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
+ .debug_info    0x00017e52      0xe3e ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
+ .debug_info    0x00018c90     0x11f0 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+ .debug_info    0x00019e80     0x157f ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
+ .debug_info    0x0001b3ff     0x15c7 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+ .debug_info    0x0001c9c6      0xa97 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
+ .debug_info    0x0001d45d     0x2fb3 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+ .debug_info    0x00020410     0x11b1 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+ .debug_info    0x000215c1     0x28a2 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
+ .debug_info    0x00023e63     0x2d32 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+ .debug_info    0x00026b95     0x3138 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+ .debug_info    0x00029ccd     0x1111 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
+ .debug_info    0x0002adde      0x8be ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+ .debug_info    0x0002b69c      0x6e4 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+ .debug_info    0x0002bd80      0xcc7 ./PCAP04/user_spi_interface.o
 
-.debug_abbrev   0x00000000     0x4d60
+.debug_abbrev   0x00000000     0x4d6b
  .debug_abbrev  0x00000000      0x263 ./BlueNRG_2/Custom_App/app_bluenrg_2.o
  .debug_abbrev  0x00000263      0x1f6 ./BlueNRG_2/Custom_App/gatt_db.o
  .debug_abbrev  0x00000459      0x1a4 ./BlueNRG_2/Custom_App/sensor.o
- .debug_abbrev  0x000005fd      0x2e8 ./BlueNRG_2/Target/hci_tl_interface.o
- .debug_abbrev  0x000008e5      0x2d4 ./Core/Src/custom_bus.o
- .debug_abbrev  0x00000bb9      0x2fc ./Core/Src/main.o
- .debug_abbrev  0x00000eb5      0x263 ./Core/Src/stm32u5xx_hal_msp.o
- .debug_abbrev  0x00001118      0x1b6 ./Core/Src/stm32u5xx_it.o
- .debug_abbrev  0x000012ce      0x129 ./Core/Src/system_stm32u5xx.o
- .debug_abbrev  0x000013f7       0x24 ./Core/Startup/startup_stm32u575rgtx.o
- .debug_abbrev  0x0000141b      0x2a5 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
- .debug_abbrev  0x000016c0      0x2ce ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
- .debug_abbrev  0x0000198e      0x2f3 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
- .debug_abbrev  0x00001c81      0x311 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
- .debug_abbrev  0x00001f92      0x234 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
- .debug_abbrev  0x000021c6      0x27e ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
- .debug_abbrev  0x00002444      0x1ff ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
- .debug_abbrev  0x00002643      0x21c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
- .debug_abbrev  0x0000285f      0x198 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
- .debug_abbrev  0x000029f7      0x20b ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
- .debug_abbrev  0x00002c02      0x25a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
- .debug_abbrev  0x00002e5c      0x228 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
- .debug_abbrev  0x00003084      0x215 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
- .debug_abbrev  0x00003299      0x2cb ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
- .debug_abbrev  0x00003564      0x23d ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
- .debug_abbrev  0x000037a1      0x2bc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
- .debug_abbrev  0x00003a5d      0x1c7 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
- .debug_abbrev  0x00003c24      0x206 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
- .debug_abbrev  0x00003e2a      0x15a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
- .debug_abbrev  0x00003f84      0x1c1 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
- .debug_abbrev  0x00004145      0x1c3 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
- .debug_abbrev  0x00004308      0x1e4 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
- .debug_abbrev  0x000044ec      0x1dd ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
- .debug_abbrev  0x000046c9      0x2d2 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
- .debug_abbrev  0x0000499b      0x189 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
- .debug_abbrev  0x00004b24      0x23c ./PCAP04/user_spi_interface.o
+ .debug_abbrev  0x000005fd      0x2f3 ./BlueNRG_2/Target/hci_tl_interface.o
+ .debug_abbrev  0x000008f0      0x2d4 ./Core/Src/custom_bus.o
+ .debug_abbrev  0x00000bc4      0x2fc ./Core/Src/main.o
+ .debug_abbrev  0x00000ec0      0x263 ./Core/Src/stm32u5xx_hal_msp.o
+ .debug_abbrev  0x00001123      0x1b6 ./Core/Src/stm32u5xx_it.o
+ .debug_abbrev  0x000012d9      0x129 ./Core/Src/system_stm32u5xx.o
+ .debug_abbrev  0x00001402       0x24 ./Core/Startup/startup_stm32u575rgtx.o
+ .debug_abbrev  0x00001426      0x2a5 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+ .debug_abbrev  0x000016cb      0x2ce ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+ .debug_abbrev  0x00001999      0x2f3 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+ .debug_abbrev  0x00001c8c      0x311 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+ .debug_abbrev  0x00001f9d      0x234 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
+ .debug_abbrev  0x000021d1      0x27e ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
+ .debug_abbrev  0x0000244f      0x1ff ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+ .debug_abbrev  0x0000264e      0x21c ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
+ .debug_abbrev  0x0000286a      0x198 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
+ .debug_abbrev  0x00002a02      0x20b ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+ .debug_abbrev  0x00002c0d      0x25a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+ .debug_abbrev  0x00002e67      0x228 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
+ .debug_abbrev  0x0000308f      0x215 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
+ .debug_abbrev  0x000032a4      0x2cb ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+ .debug_abbrev  0x0000356f      0x23d ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
+ .debug_abbrev  0x000037ac      0x2bc ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+ .debug_abbrev  0x00003a68      0x1c7 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
+ .debug_abbrev  0x00003c2f      0x206 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+ .debug_abbrev  0x00003e35      0x15a ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+ .debug_abbrev  0x00003f8f      0x1c1 ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
+ .debug_abbrev  0x00004150      0x1c3 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+ .debug_abbrev  0x00004313      0x1e4 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+ .debug_abbrev  0x000044f7      0x1dd ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
+ .debug_abbrev  0x000046d4      0x2d2 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+ .debug_abbrev  0x000049a6      0x189 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+ .debug_abbrev  0x00004b2f      0x23c ./PCAP04/user_spi_interface.o
 
 .debug_aranges  0x00000000     0x2200
  .debug_aranges
@@ -9457,43 +9457,43 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x00039a32       0x1c ./PCAP04/user_spi_interface.o
  .debug_macro   0x00039a4e       0x1c ./PCAP04/user_spi_interface.o
 
-.debug_line     0x00000000    0x29cc4
+.debug_line     0x00000000    0x29cc5
  .debug_line    0x00000000      0xe19 ./BlueNRG_2/Custom_App/app_bluenrg_2.o
  .debug_line    0x00000e19      0xf64 ./BlueNRG_2/Custom_App/gatt_db.o
  .debug_line    0x00001d7d      0xc6d ./BlueNRG_2/Custom_App/sensor.o
- .debug_line    0x000029ea      0xc67 ./BlueNRG_2/Target/hci_tl_interface.o
- .debug_line    0x00003651      0xb00 ./Core/Src/custom_bus.o
- .debug_line    0x00004151      0xf80 ./Core/Src/main.o
- .debug_line    0x000050d1      0xb47 ./Core/Src/stm32u5xx_hal_msp.o
- .debug_line    0x00005c18      0xaee ./Core/Src/stm32u5xx_it.o
- .debug_line    0x00006706      0x9f6 ./Core/Src/system_stm32u5xx.o
- .debug_line    0x000070fc       0x79 ./Core/Startup/startup_stm32u575rgtx.o
- .debug_line    0x00007175      0xd9b ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
- .debug_line    0x00007f10     0x2864 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
- .debug_line    0x0000a774     0x18db ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
- .debug_line    0x0000c04f      0xf45 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
- .debug_line    0x0000cf94      0xfc8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
- .debug_line    0x0000df5c      0xec2 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
- .debug_line    0x0000ee1e     0x1384 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
- .debug_line    0x000101a2     0x27fa ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
- .debug_line    0x0001299c      0xd3a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
- .debug_line    0x000136d6     0x1a64 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
- .debug_line    0x0001513a      0xea4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
- .debug_line    0x00015fde      0xbe8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
- .debug_line    0x00016bc6     0x1270 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
- .debug_line    0x00017e36     0x1783 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
- .debug_line    0x000195b9     0x23aa ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
- .debug_line    0x0001b963     0x260b ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
- .debug_line    0x0001df6e      0xad5 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
- .debug_line    0x0001ea43     0x148c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
- .debug_line    0x0001fecf      0xf5b ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
- .debug_line    0x00020e2a     0x1c6f ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
- .debug_line    0x00022a99     0x1c08 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
- .debug_line    0x000246a1     0x1def ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
- .debug_line    0x00026490     0x1240 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
- .debug_line    0x000276d0      0xdd2 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
- .debug_line    0x000284a2      0xd03 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
- .debug_line    0x000291a5      0xb1f ./PCAP04/user_spi_interface.o
+ .debug_line    0x000029ea      0xc68 ./BlueNRG_2/Target/hci_tl_interface.o
+ .debug_line    0x00003652      0xb00 ./Core/Src/custom_bus.o
+ .debug_line    0x00004152      0xf80 ./Core/Src/main.o
+ .debug_line    0x000050d2      0xb47 ./Core/Src/stm32u5xx_hal_msp.o
+ .debug_line    0x00005c19      0xaee ./Core/Src/stm32u5xx_it.o
+ .debug_line    0x00006707      0x9f6 ./Core/Src/system_stm32u5xx.o
+ .debug_line    0x000070fd       0x79 ./Core/Startup/startup_stm32u575rgtx.o
+ .debug_line    0x00007176      0xd9b ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+ .debug_line    0x00007f11     0x2864 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc.o
+ .debug_line    0x0000a775     0x18db ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_adc_ex.o
+ .debug_line    0x0000c050      0xf45 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_cortex.o
+ .debug_line    0x0000cf95      0xfc8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac.o
+ .debug_line    0x0000df5d      0xec2 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dac_ex.o
+ .debug_line    0x0000ee1f     0x1384 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma.o
+ .debug_line    0x000101a3     0x27fa ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_dma_ex.o
+ .debug_line    0x0001299d      0xd3a ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_exti.o
+ .debug_line    0x000136d7     0x1a64 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_fdcan.o
+ .debug_line    0x0001513b      0xea4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_gpio.o
+ .debug_line    0x00015fdf      0xbe8 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_icache.o
+ .debug_line    0x00016bc7     0x1270 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_pwr_ex.o
+ .debug_line    0x00017e37     0x1783 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc.o
+ .debug_line    0x000195ba     0x23aa ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_rcc_ex.o
+ .debug_line    0x0001b964     0x260b ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi.o
+ .debug_line    0x0001df6f      0xad5 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal_spi_ex.o
+ .debug_line    0x0001ea44     0x148c ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events.o
+ .debug_line    0x0001fed0      0xf5b ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_events_cb.o
+ .debug_line    0x00020e2b     0x1c6f ./Middlewares/ST/BlueNRG-2/hci/bluenrg1_hci_le.o
+ .debug_line    0x00022a9a     0x1c08 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gap_aci.o
+ .debug_line    0x000246a2     0x1def ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_gatt_aci.o
+ .debug_line    0x00026491     0x1240 ./Middlewares/ST/BlueNRG-2/hci/controller/bluenrg1_hal_aci.o
+ .debug_line    0x000276d1      0xdd2 ./Middlewares/ST/BlueNRG-2/hci/hci_tl_patterns/Basic/hci_tl.o
+ .debug_line    0x000284a3      0xd03 ./Middlewares/ST/BlueNRG-2/utils/ble_list.o
+ .debug_line    0x000291a6      0xb1f ./PCAP04/user_spi_interface.o
 
 .debug_str      0x00000000   0x160b22
  .debug_str     0x00000000   0x160b22 ./BlueNRG_2/Custom_App/app_bluenrg_2.o

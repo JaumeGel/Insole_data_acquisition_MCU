@@ -59,6 +59,9 @@ default.size.stdout \
 OBJDUMP_LIST += \
 Insole_data_acquisition_MCU.list \
 
+OBJCOPY_HEX += \
+Insole_data_acquisition_MCU.hex \
+
 
 # All Target
 all: main-build
@@ -82,12 +85,17 @@ Insole_data_acquisition_MCU.list: $(EXECUTABLES) makefile objects.list $(OPTIONA
 	@echo 'Finished building: $@'
 	@echo ' '
 
+Insole_data_acquisition_MCU.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "Insole_data_acquisition_MCU.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) Insole_data_acquisition_MCU.elf Insole_data_acquisition_MCU.list Insole_data_acquisition_MCU.map default.size.stdout
+	-$(RM) Insole_data_acquisition_MCU.elf Insole_data_acquisition_MCU.hex Insole_data_acquisition_MCU.list Insole_data_acquisition_MCU.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'
