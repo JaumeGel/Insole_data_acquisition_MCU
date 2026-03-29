@@ -50,7 +50,7 @@
 
 	/*Power charger MCP73871*/
 //P_SEL: Input Type Selection
-#define P_SEL	0		// 0: USB power (Limited current)
+#define P_SEL	1		// 0: USB power (Limited current)
 						// 1: AC power (1.65A max input current)
 //P_PROG2: USB Current Regulation set
 #define P_PROG2	1		// 0: 100mA max. input current

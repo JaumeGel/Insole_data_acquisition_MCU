@@ -69,7 +69,7 @@ int32_t HCI_TL_SPI_Init(void* pConf)
 {
   GPIO_InitTypeDef GPIO_InitStruct;
 
-  //__HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
