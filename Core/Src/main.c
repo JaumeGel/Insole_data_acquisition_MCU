@@ -21,7 +21,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "app_bluenrg_2.h"
 #include "custom.h"
 
 #include "user_spi_interface.h"
@@ -53,7 +52,7 @@
 #define P_SEL	1		// 0: USB power (Limited current)
 						// 1: AC power (1.65A max input current)
 //P_PROG2: USB Current Regulation set
-#define P_PROG2	1		// 0: 100mA max. input current
+#define P_PROG2	0		// 0: 100mA max. input current
 						// 1: 500mA max. input current
 //P_TE: Timer Enable to limit charging time
 #define P_TE	1		// 0: 6H Timer Disabled
@@ -63,15 +62,7 @@
 						// 1: Charging Enabled
 
 	/*BlueNRG-M2*/
-//Transmission bluetooth power
-#define TxPower	7		// 0: -15dBm
-						// 1: -12dBm
-						// 2: -8dBm
-						// 3: -5dBm
-						// 4: -2dBm
-						// 5: +1dBm
-						// 6: +5dBm
-						// 7: +8dBm
+
 
 	/*PCAP04 Capacitance sensors*/
 //PCAP04 opcodes declarations
@@ -115,6 +106,7 @@ DAC_HandleTypeDef hdac1;
 
 FDCAN_HandleTypeDef hfdcan1;
 
+SPI_HandleTypeDef hspi1;
 SPI_HandleTypeDef hspi2;
 
 /* USER CODE BEGIN PV */
@@ -122,6 +114,11 @@ SPI_HandleTypeDef hspi2;
 	/*DAC Variables*/
 uint16_t DAC_Value1;	//12-bit value for output of DAC1
 uint16_t DAC_Value2;	//12-bit value for output of DAC2
+
+	/*BlueNRG variables*/
+uint8_t SendResUpdated = 0;
+uint8_t SendCapUpdated = 0;
+uint8_t BlueNRGRequest = 0;
 
 	/*ADC Variables*/
 volatile uint32_t ADC_Values[15];	//32-bit result variables from ADC
@@ -132,9 +129,9 @@ volatile uint8_t ADC_eoc_Flag = 0;	//End of Conversion flag after each ADC scan 
 uint32_t C_Values[15];
 
 	/*PCAP04 variables declarations*/
-volatile uint8_t INTN_1_State = 1;
-volatile uint8_t INTN_2_State = 1;
-volatile uint8_t INTN_3_State = 1;
+volatile uint8_t INTN_1_State = 0;
+volatile uint8_t INTN_2_State = 0;
+volatile uint8_t INTN_3_State = 0;
 
 uint8_t CAP1_Updated = 0;
 uint8_t CAP2_Updated = 0;
@@ -213,11 +210,14 @@ static void MX_ADC1_Init(void);
 static void MX_DAC1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_ICACHE_Init(void);
+static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
 
 static void P_Charger_Init(void);
 static void CAN_Transceiver_Init(void);
 static uint8_t PCAP_Init(uint8_t channel, uint8_t State);
+static void BlueNRG_2_Init(void);
+void BlueNRG_2_Update(void);
 
 #if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin);
@@ -265,6 +265,7 @@ int main(void)
   MX_DAC1_Init();
   MX_SPI2_Init();
   MX_ICACHE_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
   HAL_GPIO_WritePin(GPIOC, LED_Ind_Pin, GPIO_PIN_SET);
@@ -272,7 +273,6 @@ int main(void)
   	  /*Peripheral initialization*/
   P_Charger_Init();
   CAN_Transceiver_Init();
-  MX_BlueNRG_2_Init(TxPower);
 
   //Test and Startup of PCAP04 ICs
   #if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
@@ -302,6 +302,9 @@ int main(void)
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
 
   HAL_GPIO_WritePin(GPIOC, LED_Ind_Pin, GPIO_PIN_RESET);
+
+  	  /*BlueNRG2 initialization*/
+  BlueNRG_2_Init();
 
   /* USER CODE END 2 */
 
@@ -353,7 +356,8 @@ int main(void)
 			{
 				R_Values[i] = (uint16_t)ADC_Values[i];
 			}
-			MX_BlueNRG_2_UpdateData(R_Values, C_Values, Measure_Select);
+			SendCapUpdated = 1;
+			SendResUpdated = 1;
 			ADC_eoc_Flag = 0;
 			CAP1_Updated = CAP2_Updated = CAP3_Updated = 0;
 			HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
@@ -364,13 +368,13 @@ int main(void)
 			{
 				R_Values[i] = (uint16_t)ADC_Values[i];
 			}
-			MX_BlueNRG_2_UpdateData(R_Values, C_Values, RES_ONLY);
+			SendResUpdated = 1;
 			ADC_eoc_Flag = 0;
 			HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
 			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
 		}else if(CAP1_Updated && CAP2_Updated && CAP3_Updated && (Measure_Select != RES_ONLY))
 		{
-			MX_BlueNRG_2_UpdateData(R_Values, C_Values, CAP_ONLY);
+			SendCapUpdated = 1;
 			CAP1_Updated = CAP2_Updated = CAP3_Updated = 0;
 			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
 		}else
@@ -378,6 +382,11 @@ int main(void)
 
 		}
 	#endif
+	if(BlueNRGRequest)
+	{
+		BlueNRG_2_Update();
+		BlueNRGRequest = 0;
+	}
   }
   /* USER CODE END 3 */
 }
@@ -400,11 +409,8 @@ void SystemClock_Config(void)
 
   /** Initializes the CPU, AHB and APB buses clocks
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI
-                              |RCC_OSCILLATORTYPE_HSE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_LSI|RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
-  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.LSIDiv = RCC_LSI_DIV1;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
@@ -791,6 +797,63 @@ static void MX_ICACHE_Init(void)
 }
 
 /**
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI1_Init(void)
+{
+
+  /* USER CODE BEGIN SPI1_Init 0 */
+
+  /* USER CODE END SPI1_Init 0 */
+
+  SPI_AutonomousModeConfTypeDef HAL_SPI_AutonomousMode_Cfg_Struct = {0};
+
+  /* USER CODE BEGIN SPI1_Init 1 */
+
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_64;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 0x7;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_DISABLE;
+  hspi1.Init.NSSPolarity = SPI_NSS_POLARITY_LOW;
+  hspi1.Init.FifoThreshold = SPI_FIFO_THRESHOLD_01DATA;
+  hspi1.Init.MasterSSIdleness = SPI_MASTER_SS_IDLENESS_00CYCLE;
+  hspi1.Init.MasterInterDataIdleness = SPI_MASTER_INTERDATA_IDLENESS_00CYCLE;
+  hspi1.Init.MasterReceiverAutoSusp = SPI_MASTER_RX_AUTOSUSP_DISABLE;
+  hspi1.Init.MasterKeepIOState = SPI_MASTER_KEEP_IO_STATE_DISABLE;
+  hspi1.Init.IOSwap = SPI_IO_SWAP_DISABLE;
+  hspi1.Init.ReadyMasterManagement = SPI_RDY_MASTER_MANAGEMENT_INTERNALLY;
+  hspi1.Init.ReadyPolarity = SPI_RDY_POLARITY_HIGH;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  HAL_SPI_AutonomousMode_Cfg_Struct.TriggerState = SPI_AUTO_MODE_DISABLE;
+  HAL_SPI_AutonomousMode_Cfg_Struct.TriggerSelection = SPI_GRP1_GPDMA_CH0_TCF_TRG;
+  HAL_SPI_AutonomousMode_Cfg_Struct.TriggerPolarity = SPI_TRIG_POLARITY_RISING;
+  if (HAL_SPIEx_SetConfigAutonomousMode(&hspi1, &HAL_SPI_AutonomousMode_Cfg_Struct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI1_Init 2 */
+
+  /* USER CODE END SPI1_Init 2 */
+
+}
+
+/**
   * @brief SPI2 Initialization Function
   * @param None
   * @retval None
@@ -875,7 +938,7 @@ static void MX_GPIO_Init(void)
                           |Unused6_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, Unused2_Pin|Unused3_Pin|P_SEL_Pin|P_PROG2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, Unused2_Pin|Unused3_Pin|P_PROG2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(CAN_STB_GPIO_Port, CAN_STB_Pin, GPIO_PIN_SET);
@@ -884,7 +947,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(BLE_CS_GPIO_Port, BLE_CS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(BLE_RST_GPIO_Port, BLE_RST_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, BLE_RST_Pin|P_SEL_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : P_CE_Pin */
   GPIO_InitStruct.Pin = P_CE_Pin;
@@ -956,12 +1019,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(BLE_RST_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : P_SEL_Pin P_PROG2_Pin */
-  GPIO_InitStruct.Pin = P_SEL_Pin|P_PROG2_Pin;
+  /*Configure GPIO pin : P_SEL_Pin */
+  GPIO_InitStruct.Pin = P_SEL_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(P_SEL_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : P_PROG2_Pin */
+  GPIO_InitStruct.Pin = P_PROG2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(P_PROG2_GPIO_Port, &GPIO_InitStruct);
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI6_IRQn, 1, 0);
@@ -1098,6 +1168,73 @@ static uint8_t PCAP_Init(uint8_t channel, uint8_t State)
 	return 1;
 }
 
+/**
+  * @brief  Initialize BlueNRG Device.
+  * @param	none
+  * @retval none
+  */
+static void BlueNRG_2_Init(void)
+{
+	HAL_GPIO_WritePin(BLE_RST_GPIO_Port, BLE_RST_Pin, GPIO_PIN_RESET);
+	HAL_Delay(200);
+	HAL_GPIO_WritePin(BLE_RST_GPIO_Port, BLE_RST_Pin, GPIO_PIN_SET);
+}
+
+/**
+  * @brief  Update BlueNRG data.
+  * @param	none
+  * @retval none
+  */
+void BlueNRG_2_Update(void)
+{
+	uint16_t SPIDataSize = 0;
+	uint8_t TxData[91];
+	uint8_t RxData[91];
+
+	if(((Measure_Select == RES_ONLY) && SendResUpdated) || ((Measure_Select == RES_CAP) && !SendCapUpdated)){
+		SPIDataSize = 30;
+		TxData[0] = RES_ONLY;
+		for(int i = 0;i<15;i++){
+			TxData[2*i+1] = (uint8_t)((R_Values[i]>>8) & 0xFF);		//High Byte MSB
+			TxData[2*i+2] = (uint8_t)(R_Values[i] & 0xFF);			//Low Byte LSB
+		}
+		SendResUpdated = 0;
+	}else if(((Measure_Select == CAP_ONLY) && SendCapUpdated) || ((Measure_Select == RES_CAP) && !SendResUpdated)){
+		SPIDataSize = 60;
+		TxData[0] = CAP_ONLY;
+		for(int i = 0;i<15;i++){
+			TxData[4*i+1] = (uint8_t)((C_Values[i]>>24) & 0xFF);	//High Byte MSB
+			TxData[4*i+2] = (uint8_t)((C_Values[i]>>16) & 0xFF);	//2nd Byte
+			TxData[4*i+3] = (uint8_t)((C_Values[i]>>8) & 0xFF);		//3rd Byte
+			TxData[4*i+4] = (uint8_t)(C_Values[i] & 0xFF);			//Low Byte LSB
+		}
+		SendCapUpdated = 0;
+	}else if((Measure_Select == RES_CAP) && SendResUpdated && SendCapUpdated){
+		SPIDataSize = 90;
+		TxData[0] = RES_CAP;
+		for(int i = 0;i<15;i++){
+			TxData[2*i+1] = (uint8_t)((R_Values[i]>>8) & 0xFF);		//High Byte MSB
+			TxData[2*i+2] = (uint8_t)(R_Values[i] & 0xFF);			//Low Byte LSB
+		}
+		for(int i = 0;i<15;i++){
+			TxData[4*i+31] = (uint8_t)((C_Values[i]>>24) & 0xFF);	//High Byte MSB
+			TxData[4*i+32] = (uint8_t)((C_Values[i]>>16) & 0xFF);	//2nd Byte
+			TxData[4*i+33] = (uint8_t)((C_Values[i]>>8) & 0xFF);		//3rd Byte
+			TxData[4*i+34] = (uint8_t)(C_Values[i] & 0xFF);			//Low Byte LSB
+		}
+		SendResUpdated = 0;
+		SendCapUpdated = 0;
+	}else{
+		SPIDataSize = 0;
+		TxData[0] = NONE;
+	}
+
+	HAL_GPIO_WritePin(BLE_CS_GPIO_Port, BLE_CS_Pin, GPIO_PIN_RESET);
+	HAL_SPI_TransmitReceive(&hspi1, TxData, RxData, (SPIDataSize + 1), 10);
+	HAL_GPIO_WritePin(BLE_CS_GPIO_Port, BLE_CS_Pin, GPIO_PIN_SET);
+
+}
+
 void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 {
 	if(ADC_eoc_Flag == 0)
@@ -1107,6 +1244,14 @@ void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
 
 }
 
+void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin)
+{
+	if(GPIO_Pin == BLE_EXTI_Pin)
+	{
+		BlueNRGRequest = 1;
+	}
+}
+
 	/*Only process SPI2 interrupts when Measuring Capacitive Sensors*/
 #if((Measure_Select == CAP_ONLY) || (Measure_Select == RES_CAP))
 /**
@@ -1114,20 +1259,20 @@ void HAL_ADC_ConvCpltCallback (ADC_HandleTypeDef * hadc)
   * @param	GPIO_Pin: Pin that triggered the interrupt
   * @retval none
   */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin)
 {
 	//Set INTN_X_State to 1 when incoming signal is set to Low
 	if(GPIO_Pin == C1_INTN_Pin)
 	{
-		INTN_1_State = (HAL_GPIO_ReadPin(GPIOA, C1_INTN_Pin) == GPIO_PIN_RESET);	//INTN low active
+		INTN_1_State = 1;	//INTN low active
 	}
 	if(GPIO_Pin == C2_INTN_Pin)
 	{
-		INTN_2_State = (HAL_GPIO_ReadPin(GPIOA, C2_INTN_Pin) == GPIO_PIN_RESET);	//INTN low active
+		INTN_2_State = 1;	//INTN low active
 	}
 	if(GPIO_Pin == C3_INTN_Pin)
 	{
-		INTN_3_State = (HAL_GPIO_ReadPin(GPIOA, C3_INTN_Pin) == GPIO_PIN_RESET);	//INTN low active
+		INTN_3_State = 1;	//INTN low active
 	}
 }
 #endif

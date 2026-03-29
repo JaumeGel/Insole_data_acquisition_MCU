@@ -33,9 +33,7 @@ PCAP04/user_spi_interface.o: ../PCAP04/user_spi_interface.c \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_spi_ex.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_fdcan.h \
- ../Core/Inc/main.h ../BlueNRG_2/Target/hci_tl_interface.h \
- ../Core/Inc/custom_bus.h ../Core/Inc/custom_conf.h \
- ../Core/Inc/custom_errno.h
+ ../Core/Inc/main.h
 ../PCAP04/user_spi_interface.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h:
 ../Core/Inc/stm32u5xx_hal_conf.h:
@@ -71,7 +69,3 @@ PCAP04/user_spi_interface.o: ../PCAP04/user_spi_interface.c \
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_fdcan.h:
 ../Core/Inc/main.h:
-../BlueNRG_2/Target/hci_tl_interface.h:
-../Core/Inc/custom_bus.h:
-../Core/Inc/custom_conf.h:
-../Core/Inc/custom_errno.h:

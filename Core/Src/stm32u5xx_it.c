@@ -55,10 +55,10 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern SPI_HandleTypeDef hspi1;
 extern DMA_HandleTypeDef handle_GPDMA1_Channel0;
 extern ADC_HandleTypeDef hadc1;
 extern FDCAN_HandleTypeDef hfdcan1;
+extern SPI_HandleTypeDef hspi1;
 extern SPI_HandleTypeDef hspi2;
 /* USER CODE BEGIN EV */
 
@@ -210,7 +210,7 @@ void EXTI6_IRQHandler(void)
   /* USER CODE BEGIN EXTI6_IRQn 0 */
 
   /* USER CODE END EXTI6_IRQn 0 */
-  HAL_EXTI_IRQHandler(&H_EXTI_6);
+  HAL_GPIO_EXTI_IRQHandler(BLE_EXTI_Pin);
   /* USER CODE BEGIN EXTI6_IRQn 1 */
 
   /* USER CODE END EXTI6_IRQn 1 */

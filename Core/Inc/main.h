@@ -29,7 +29,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32u5xx_hal.h"
 
-#include "hci_tl_interface.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -95,12 +94,6 @@ void Error_Handler(void);
 #define Unused6_GPIO_Port GPIOC
 #define BLE_CS_Pin GPIO_PIN_2
 #define BLE_CS_GPIO_Port GPIOD
-#define BLE_SPI_SCK_Pin GPIO_PIN_3
-#define BLE_SPI_SCK_GPIO_Port GPIOB
-#define BLE_SPI_MISO_Pin GPIO_PIN_4
-#define BLE_SPI_MISO_GPIO_Port GPIOB
-#define BLE_SPI_MOSI_Pin GPIO_PIN_5
-#define BLE_SPI_MOSI_GPIO_Port GPIOB
 #define BLE_EXTI_Pin GPIO_PIN_6
 #define BLE_EXTI_GPIO_Port GPIOB
 #define BLE_EXTI_EXTI_IRQn EXTI6_IRQn
