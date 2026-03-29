@@ -117,7 +117,7 @@ Recommended: STM32CubeIDE (project files and .ioc are included)
 
 ## Contact
 
-Author / Maintainer: JaumeGel  
+Author: JaumeGel  
 Repository: https://github.com/JaumeGel/Insole_data_acquisition_MCU
 
 If you need help adapting the code to other STM32 variants, to change the BLE packet format or to integrate with a PC/mobile client, please open an issue describing your target device and use-case.
