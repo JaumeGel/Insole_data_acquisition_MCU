@@ -5027,55 +5027,55 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  *(.text)
  .text          0x08000238       0x40 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
  *(.text*)
- .text.main     0x08000278      0x1fc ./Core/Src/main.o
+ .text.main     0x08000278      0x1f4 ./Core/Src/main.o
                 0x08000278                main
  .text.SystemClock_Config
-                0x08000474       0xba ./Core/Src/main.o
-                0x08000474                SystemClock_Config
- *fill*         0x0800052e        0x2 
+                0x0800046c       0xba ./Core/Src/main.o
+                0x0800046c                SystemClock_Config
+ *fill*         0x08000526        0x2 
  .text.MX_ADC1_Init
-                0x08000530      0x2b0 ./Core/Src/main.o
+                0x08000528      0x2b0 ./Core/Src/main.o
  .text.MX_DAC1_Init
-                0x080007e0       0xb4 ./Core/Src/main.o
+                0x080007d8       0xb4 ./Core/Src/main.o
  .text.MX_FDCAN1_Init
-                0x08000894       0x8c ./Core/Src/main.o
+                0x0800088c       0x8c ./Core/Src/main.o
  .text.MX_GPDMA1_Init
-                0x08000920       0x40 ./Core/Src/main.o
+                0x08000918       0x40 ./Core/Src/main.o
  .text.MX_ICACHE_Init
-                0x08000960       0x16 ./Core/Src/main.o
- *fill*         0x08000976        0x2 
+                0x08000958       0x16 ./Core/Src/main.o
+ *fill*         0x0800096e        0x2 
  .text.MX_SPI1_Init
-                0x08000978       0xe0 ./Core/Src/main.o
+                0x08000970       0xe0 ./Core/Src/main.o
  .text.MX_SPI2_Init
-                0x08000a58       0xe0 ./Core/Src/main.o
+                0x08000a50       0xe0 ./Core/Src/main.o
  .text.MX_GPIO_Init
-                0x08000b38      0x2b0 ./Core/Src/main.o
+                0x08000b30      0x2b0 ./Core/Src/main.o
  .text.P_Charger_Init
-                0x08000de8       0x40 ./Core/Src/main.o
+                0x08000de0       0x40 ./Core/Src/main.o
  .text.CAN_Transceiver_Init
-                0x08000e28       0x18 ./Core/Src/main.o
+                0x08000e20       0x18 ./Core/Src/main.o
  .text.PCAP_Init
-                0x08000e40      0x124 ./Core/Src/main.o
+                0x08000e38      0x124 ./Core/Src/main.o
  .text.BlueNRG_2_Init
-                0x08000f64       0x28 ./Core/Src/main.o
+                0x08000f5c       0x28 ./Core/Src/main.o
  .text.BlueNRG_2_Update
-                0x08000f8c       0xd0 ./Core/Src/main.o
-                0x08000f8c                BlueNRG_2_Update
+                0x08000f84       0xd4 ./Core/Src/main.o
+                0x08000f84                BlueNRG_2_Update
  .text.HAL_ADC_ConvCpltCallback
-                0x0800105c       0x28 ./Core/Src/main.o
-                0x0800105c                HAL_ADC_ConvCpltCallback
+                0x08001058       0x28 ./Core/Src/main.o
+                0x08001058                HAL_ADC_ConvCpltCallback
  .text.HAL_GPIO_EXTI_Rising_Callback
-                0x08001084       0x28 ./Core/Src/main.o
-                0x08001084                HAL_GPIO_EXTI_Rising_Callback
+                0x08001080       0x28 ./Core/Src/main.o
+                0x08001080                HAL_GPIO_EXTI_Rising_Callback
  .text.Error_Handler
-                0x080010ac        0xc ./Core/Src/main.o
-                0x080010ac                Error_Handler
+                0x080010a8        0xc ./Core/Src/main.o
+                0x080010a8                Error_Handler
  .text.HAL_MspInit
-                0x080010b8       0x34 ./Core/Src/stm32u5xx_hal_msp.o
-                0x080010b8                HAL_MspInit
+                0x080010b4       0x34 ./Core/Src/stm32u5xx_hal_msp.o
+                0x080010b4                HAL_MspInit
  .text.HAL_ADC_MspInit
-                0x080010ec      0x1e4 ./Core/Src/stm32u5xx_hal_msp.o
-                0x080010ec                HAL_ADC_MspInit
+                0x080010e8      0x1e8 ./Core/Src/stm32u5xx_hal_msp.o
+                0x080010e8                HAL_ADC_MspInit
  .text.HAL_DAC_MspInit
                 0x080012d0       0xd0 ./Core/Src/stm32u5xx_hal_msp.o
                 0x080012d0                HAL_DAC_MspInit
@@ -5730,7 +5730,7 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 .igot.plt       0x20000364        0x0 load address 0x0800a8e5
  .igot.plt      0x20000364        0x0 C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v8-m.main+fp/hard/crtbegin.o
 
-.bss            0x20000364      0x328 load address 0x0800a8e5
+.bss            0x20000364      0x30c load address 0x0800a8e5
                 0x20000364                        _sbss = .
                 0x20000364                        __bss_start__ = _sbss
  *(.bss)
@@ -5766,46 +5766,46 @@ LOAD C:/ST/STM32CubeIDE_1.18.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x20000622                BlueNRGRequest
  *fill*         0x20000623        0x1 
  .bss.ADC_Values
-                0x20000624       0x3c ./Core/Src/main.o
+                0x20000624       0x1e ./Core/Src/main.o
                 0x20000624                ADC_Values
- .bss.R_Values  0x20000660       0x1e ./Core/Src/main.o
-                0x20000660                R_Values
+ *fill*         0x20000642        0x2 
+ .bss.R_Values  0x20000644       0x1e ./Core/Src/main.o
+                0x20000644                R_Values
  .bss.ADC_eoc_Flag
-                0x2000067e        0x1 ./Core/Src/main.o
-                0x2000067e                ADC_eoc_Flag
+                0x20000662        0x1 ./Core/Src/main.o
+                0x20000662                ADC_eoc_Flag
  .bss.CAP1_Updated
-                0x2000067f        0x1 ./Core/Src/main.o
-                0x2000067f                CAP1_Updated
+                0x20000663        0x1 ./Core/Src/main.o
+                0x20000663                CAP1_Updated
  .bss.CAP2_Updated
-                0x20000680        0x1 ./Core/Src/main.o
-                0x20000680                CAP2_Updated
+                0x20000664        0x1 ./Core/Src/main.o
+                0x20000664                CAP2_Updated
  .bss.CAP3_Updated
-                0x20000681        0x1 ./Core/Src/main.o
-                0x20000681                CAP3_Updated
- .bss.PCAP1_OK  0x20000682        0x1 ./Core/Src/main.o
-                0x20000682                PCAP1_OK
- .bss.PCAP2_OK  0x20000683        0x1 ./Core/Src/main.o
-                0x20000683                PCAP2_OK
- .bss.PCAP3_OK  0x20000684        0x1 ./Core/Src/main.o
-                0x20000684                PCAP3_OK
- *fill*         0x20000685        0x3 
- .bss.uwTick    0x20000688        0x4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
-                0x20000688                uwTick
+                0x20000665        0x1 ./Core/Src/main.o
+                0x20000665                CAP3_Updated
+ .bss.PCAP1_OK  0x20000666        0x1 ./Core/Src/main.o
+                0x20000666                PCAP1_OK
+ .bss.PCAP2_OK  0x20000667        0x1 ./Core/Src/main.o
+                0x20000667                PCAP2_OK
+ .bss.PCAP3_OK  0x20000668        0x1 ./Core/Src/main.o
+                0x20000668                PCAP3_OK
+ *fill*         0x20000669        0x3 
+ .bss.uwTick    0x2000066c        0x4 ./Drivers/STM32U5xx_HAL_Driver/Src/stm32u5xx_hal.o
+                0x2000066c                uwTick
  *(COMMON)
-                0x2000068c                        _ebss = .
-                0x2000068c                        __bss_end__ = _ebss
+                0x20000670                        _ebss = .
+                0x20000670                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2000068c      0x604 load address 0x0800a8e5
-                0x20000690                        . = ALIGN (0x8)
- *fill*         0x2000068c        0x4 
+                0x20000670      0x600 load address 0x0800a8e5
+                0x20000670                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x20000690                        PROVIDE (_end = .)
-                0x20000890                        . = (. + _Min_Heap_Size)
- *fill*         0x20000690      0x200 
-                0x20000c90                        . = (. + _Min_Stack_Size)
- *fill*         0x20000890      0x400 
-                0x20000c90                        . = ALIGN (0x8)
+                0x20000670                        PROVIDE (_end = .)
+                0x20000870                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000670      0x200 
+                0x20000c70                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000870      0x400 
+                0x20000c70                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)

@@ -150,7 +150,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     handle_GPDMA1_Channel0.Init.BlkHWRequest = DMA_BREQ_SINGLE_BURST;
     handle_GPDMA1_Channel0.Init.Direction = DMA_PERIPH_TO_MEMORY;
     handle_GPDMA1_Channel0.Init.SrcInc = DMA_SINC_FIXED;
-    handle_GPDMA1_Channel0.Init.DestInc = DMA_DINC_FIXED;
+    handle_GPDMA1_Channel0.Init.DestInc = DMA_DINC_INCREMENTED;
     handle_GPDMA1_Channel0.Init.SrcDataWidth = DMA_SRC_DATAWIDTH_HALFWORD;
     handle_GPDMA1_Channel0.Init.DestDataWidth = DMA_DEST_DATAWIDTH_HALFWORD;
     handle_GPDMA1_Channel0.Init.Priority = DMA_LOW_PRIORITY_LOW_WEIGHT;

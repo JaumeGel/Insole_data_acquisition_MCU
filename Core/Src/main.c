@@ -121,7 +121,7 @@ uint8_t SendCapUpdated = 0;
 uint8_t BlueNRGRequest = 0;
 
 	/*ADC Variables*/
-volatile uint32_t ADC_Values[15];	//32-bit result variables from ADC
+volatile uint16_t ADC_Values[15];	//32-bit result variables from ADC
 uint16_t R_Values[15];		//14-bit converted readout values from ADC saved into 16-bit length
 volatile uint8_t ADC_eoc_Flag = 0;	//End of Conversion flag after each ADC scan conversion
 
@@ -354,29 +354,26 @@ int main(void)
 		{
 			for(int i=0;i<15;i++)
 			{
-				R_Values[i] = (uint16_t)ADC_Values[i];
+				R_Values[i] = ADC_Values[i];
 			}
 			SendCapUpdated = 1;
 			SendResUpdated = 1;
 			ADC_eoc_Flag = 0;
 			CAP1_Updated = CAP2_Updated = CAP3_Updated = 0;
 			HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
-			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
 		}else if (ADC_eoc_Flag && (Measure_Select != CAP_ONLY))
 		{
 			for(int i=0;i<15;i++)
 			{
-				R_Values[i] = (uint16_t)ADC_Values[i];
+				R_Values[i] = ADC_Values[i];
 			}
 			SendResUpdated = 1;
 			ADC_eoc_Flag = 0;
 			HAL_ADC_Start_DMA(&hadc1, (uint32_t*)&ADC_Values, 15);
-			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
 		}else if(CAP1_Updated && CAP2_Updated && CAP3_Updated && (Measure_Select != RES_ONLY))
 		{
 			SendCapUpdated = 1;
 			CAP1_Updated = CAP2_Updated = CAP3_Updated = 0;
-			HAL_GPIO_TogglePin(GPIOC, LED_Ind_Pin);
 		}else
 		{
 
@@ -386,7 +383,9 @@ int main(void)
 	{
 		BlueNRG_2_Update();
 		BlueNRGRequest = 0;
+		HAL_GPIO_TogglePin(LED_Ind_GPIO_Port, LED_Ind_Pin);
 	}
+
   }
   /* USER CODE END 3 */
 }
@@ -1192,15 +1191,16 @@ void BlueNRG_2_Update(void)
 	uint8_t RxData[91];
 
 	if(((Measure_Select == RES_ONLY) && SendResUpdated) || ((Measure_Select == RES_CAP) && !SendCapUpdated)){
-		SPIDataSize = 30;
+		SPIDataSize = 31;
 		TxData[0] = RES_ONLY;
 		for(int i = 0;i<15;i++){
 			TxData[2*i+1] = (uint8_t)((R_Values[i]>>8) & 0xFF);		//High Byte MSB
 			TxData[2*i+2] = (uint8_t)(R_Values[i] & 0xFF);			//Low Byte LSB
 		}
+		TxData[31] = 0xFF;
 		SendResUpdated = 0;
 	}else if(((Measure_Select == CAP_ONLY) && SendCapUpdated) || ((Measure_Select == RES_CAP) && !SendResUpdated)){
-		SPIDataSize = 60;
+		SPIDataSize = 61;
 		TxData[0] = CAP_ONLY;
 		for(int i = 0;i<15;i++){
 			TxData[4*i+1] = (uint8_t)((C_Values[i]>>24) & 0xFF);	//High Byte MSB
@@ -1208,9 +1208,10 @@ void BlueNRG_2_Update(void)
 			TxData[4*i+3] = (uint8_t)((C_Values[i]>>8) & 0xFF);		//3rd Byte
 			TxData[4*i+4] = (uint8_t)(C_Values[i] & 0xFF);			//Low Byte LSB
 		}
+		TxData[61] = 0xFF;
 		SendCapUpdated = 0;
 	}else if((Measure_Select == RES_CAP) && SendResUpdated && SendCapUpdated){
-		SPIDataSize = 90;
+		SPIDataSize = 91;
 		TxData[0] = RES_CAP;
 		for(int i = 0;i<15;i++){
 			TxData[2*i+1] = (uint8_t)((R_Values[i]>>8) & 0xFF);		//High Byte MSB
@@ -1222,6 +1223,7 @@ void BlueNRG_2_Update(void)
 			TxData[4*i+33] = (uint8_t)((C_Values[i]>>8) & 0xFF);		//3rd Byte
 			TxData[4*i+34] = (uint8_t)(C_Values[i] & 0xFF);			//Low Byte LSB
 		}
+		TxData[91] = 0xFF;
 		SendResUpdated = 0;
 		SendCapUpdated = 0;
 	}else{
